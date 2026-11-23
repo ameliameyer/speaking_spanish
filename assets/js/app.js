@@ -2,8 +2,7 @@ import { authReady, getCurrentUser, getCompleted, onProfileChange, completeLesso
 const root=document.querySelector('#app'),nav=document.querySelector('#nav');
 const sections=['Home','Curriculum','Vocabulary','Verb Lab','Conversation','Practice Together','Practice'];
 let curriculum,vocab,verbs,section='Home',lessonId=null;
-const saved=()=>{try{return JSON.parse(localStorage.getItem('ss-completed')||'[]')}catch{return []}};
-const save=(ids)=>{try{localStorage.setItem('ss-completed',JSON.stringify(ids))}catch{alert('Browser storage unavailable. Progress cannot be saved.')}};
+const saved=()=>getCompleted();
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const a0=()=>curriculum.levels[0].lessons;
 const lessonContent={

@@ -57,7 +57,7 @@ function renderAccount(){
 function showEmailForm(){
  const form=document.querySelector('#account-form');form.hidden=false;
  form.innerHTML=`<form id="email-auth-form"><label>Email <input name="email" autocomplete="email" type="email" required></label><label>Password <input name="password" autocomplete="current-password" type="password" minlength="6" required></label><div class="role-switch"><button type="submit">Sign in</button><button type="button" id="register-email" class="secondary">Create account</button><button type="button" id="reset-email" class="secondary">Reset password</button><button type="button" id="cancel-email" class="secondary">Cancel</button></div><p id="form-error" role="status"></p></form>`;
- const f=form.querySelector('#email-auth-form');const values=()=>({email:f.email.value,password:f.password.value});
+ const f=form.querySelector('#email-auth-form');const values=()=>({email:f.elements.namedItem('email').value,password:f.elements.namedItem('password').value});
  const err=e=>{form.querySelector('#form-error').textContent=humanError(e)};
  f.onsubmit=async e=>{e.preventDefault();try{const v=values();await loginEmail(v.email,v.password);form.hidden=true}catch(e){err(e)}};
  form.querySelector('#register-email').onclick=async()=>{try{const v=values();await registerEmail(v.email,v.password);form.hidden=true}catch(e){err(e)}};

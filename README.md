@@ -17,3 +17,6 @@ A self-paced Mexican Spanish learning website, starting at A0.
 
 ## Notes
 Progress is stored in browser `localStorage`, not a GitHub account. Clearing site data or switching devices can reset it. The site needs HTTP(S) to load JSON with `fetch`; for local preview use `python -m http.server 8000` in the repository directory.
+
+## Version 1.1 visual refresh
+The site now uses a dark navy centered hero, Montserrat typography, slate-blue navigation and buttons, and a light-gray background, matching the Ducks in Order visual direction. Lesson data and browser-saved progress are preserved.

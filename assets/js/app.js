@@ -6,17 +6,706 @@ const saved=()=>getCompleted();
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const a0=()=>curriculum.levels[0].lessons;
 const lessonContent={
-'a0-01':{intro:'Spanish uses the same five vowel letters as English, but their sounds are much more consistent. Learn the sounds first: they will help you pronounce unfamiliar words.',examples:[['a','ah — as in casa (house)'],['e','eh — as in mesa (table)'],['i','ee — as in sí (yes)'],['o','oh — as in no (no)'],['u','oo — as in uno (one)']],breakdown:'In Mexican Spanish, the letter h is silent (hola sounds roughly like OH-lah). The letter j often sounds like a strong English h (jugo). Ñ sounds like ny (niño). The letters r and rr are different sounds: pero (but) and perro (dog). The letter ll is usually pronounced like English y in much of Mexico, though regional accents vary.',question:'Which Spanish vowel usually sounds like “ee” in English?',options:['a','i','o'],answer:1,explanation:'The letter i makes an ee sound, as in sí.'},
-'a0-02':{intro:'Spanish words have a stressed syllable, the part you say with extra emphasis. Written accent marks show where stress falls when needed.',examples:[['casa','CA-sa'],['México','MÉ-xi-co'],['café','ca-FÉ']],breakdown:'Words ending in a vowel, n or s normally stress the second-to-last syllable. Words ending in most other consonants normally stress the last syllable. A written accent can override the default pattern. The accent mark also distinguishes some words, like sí (yes) and si (if).',question:'Which syllable is stressed in café?',options:['ca','fé'],answer:1,explanation:'The accent on é marks the stressed syllable.'},
-'a0-03':{intro:'Start with everyday greetings. In Mexico, both informal and polite forms are useful.',examples:[['Hola.','Hello.'],['Buenos días.','Good morning.'],['Me llamo Ana.','My name is Ana.'],['Mucho gusto.','Nice to meet you.']],breakdown:'Me llamo literally uses a form of llamarse (to be called). You can introduce yourself with Me llamo + your name. Mucho gusto is a common response when meeting someone. Use ¿Cómo estás? with someone you address as tú and ¿Cómo está? when using usted.',question:'How do you say “Nice to meet you”?',options:['Mucho gusto','Buenas noches','Gracias'],answer:0,explanation:'Mucho gusto is a common way to say nice to meet you.'}
+  "a0-01": {
+    "intro": "Spanish has 27 letters, including ñ. Five vowel sounds are relatively stable: a /a/, e /e/, i /i/, o /o/, u /u/. In Mexico, c before e or i and z sound like s; h is silent; j is a strong breathy sound. G before e or i resembles j; gu before e or i usually has a silent u. R and rr contrast between vowels.",
+    "examples": [
+      [
+        "casa",
+        "house"
+      ],
+      [
+        "queso",
+        "cheese"
+      ],
+      [
+        "guitarra",
+        "guitar"
+      ],
+      [
+        "niño",
+        "child"
+      ],
+      [
+        "pero / perro",
+        "but / dog"
+      ]
+    ],
+    "breakdown": "In queso, qu represents k and u is silent. In niño, ñ is a single sound. In perro, rr is trilled.",
+    "mistake": "Do not pronounce the h in hola or give Spanish vowels English-style glides.",
+    "vocabulary": [
+      "hola — hello",
+      "agua — water",
+      "leche — milk"
+    ],
+    "partner": "Take turns spelling your names and reading the examples aloud.",
+    "quiz": [
+      [
+        "Which letter is silent in hola?",
+        [
+          "h",
+          "l",
+          "a"
+        ],
+        0,
+        "H is silent."
+      ],
+      [
+        "Which word means dog?",
+        [
+          "pero",
+          "perro",
+          "pelo"
+        ],
+        1,
+        "Perro has a trilled rr."
+      ],
+      [
+        "Which vowel sounds closest to English ee?",
+        [
+          "e",
+          "u",
+          "i"
+        ],
+        2,
+        "Spanish i is /i/."
+      ]
+    ]
+  },
+  "a0-02": {
+    "intro": "Words ending in a vowel, n or s normally stress the penultimate syllable; other consonants normally take final stress. Written accents override these patterns and can distinguish words such as sí and si.",
+    "examples": [
+      [
+        "casa",
+        "CA-sa"
+      ],
+      [
+        "papel",
+        "pa-PEL"
+      ],
+      [
+        "México",
+        "MÉ-xi-co"
+      ],
+      [
+        "café",
+        "ca-FÉ"
+      ]
+    ],
+    "breakdown": "Divide café into ca and fé. Its final vowel would normally suggest penultimate stress, but é marks final stress.",
+    "mistake": "Do not ignore written accents or assume every word has final stress.",
+    "vocabulary": [
+      "sí — yes",
+      "si — if",
+      "té — tea"
+    ],
+    "partner": "Read the examples and have your partner identify the stressed syllable.",
+    "quiz": [
+      [
+        "Stress in papel?",
+        [
+          "pa",
+          "pel"
+        ],
+        1,
+        "Final l normally signals final stress."
+      ],
+      [
+        "Stress in México?",
+        [
+          "Mé",
+          "xi",
+          "co"
+        ],
+        0,
+        "The accent marks Mé."
+      ],
+      [
+        "Which means yes?",
+        [
+          "si",
+          "sí"
+        ],
+        1,
+        "Sí has a written accent."
+      ]
+    ]
+  },
+  "a0-03": {
+    "intro": "Use hola at any time; buenos días in the morning, buenas tardes in the afternoon and buenas noches at night. Tú is familiar; usted is respectful or formal, depending on context. Me llamo introduces your name.",
+    "examples": [
+      [
+        "¿Cómo estás?",
+        "How are you? (familiar)"
+      ],
+      [
+        "¿Cómo está?",
+        "How are you? (formal)"
+      ],
+      [
+        "Me llamo Ana.",
+        "My name is Ana."
+      ],
+      [
+        "Mucho gusto.",
+        "Nice to meet you."
+      ]
+    ],
+    "breakdown": "Start with Hola, ask ¿Cómo te llamas?, answer Me llamo + name, then respond Mucho gusto or Igualmente.",
+    "mistake": "Do not mix te llamas with usted in the same question; use ¿Cómo se llama? for usted.",
+    "vocabulary": [
+      "gracias — thanks",
+      "hasta luego — see you later",
+      "bien — well"
+    ],
+    "partner": "Introduce yourselves as strangers, then repeat using usted.",
+    "quiz": [
+      [
+        "Formal how are you?",
+        [
+          "¿Cómo estás?",
+          "¿Cómo está?"
+        ],
+        1,
+        "Está agrees with usted."
+      ],
+      [
+        "Nice to meet you?",
+        [
+          "Mucho gusto",
+          "Hasta luego",
+          "Buenas noches"
+        ],
+        0,
+        "Mucho gusto is a greeting response."
+      ],
+      [
+        "My name is Ana?",
+        [
+          "Me llamo Ana",
+          "Te llamas Ana"
+        ],
+        0,
+        "Me llamo refers to yourself."
+      ]
+    ]
+  },
+  "a0-04": {
+    "intro": "Yo means I; tú means familiar you; usted means respectful you; él and ella mean he and she; nosotros/nosotras means we; ellos/ellas means they; ustedes means plural you in Mexico. Usted and ustedes take third-person verb forms. Subject pronouns are often omitted when the verb makes the subject clear.",
+    "examples": [
+      [
+        "Yo soy Ana.",
+        "I am Ana."
+      ],
+      [
+        "Tú eres Luis.",
+        "You are Luis."
+      ],
+      [
+        "Ustedes son amigos.",
+        "You all are friends."
+      ]
+    ],
+    "breakdown": "Identify the speaker, listener or third party; choose singular or plural; then select the matching verb form.",
+    "mistake": "Do not use vosotros as the default plural you in Mexican Spanish.",
+    "vocabulary": [
+      "yo — I",
+      "usted — you",
+      "nosotros — we"
+    ],
+    "partner": "Point to yourself, your partner and both of you and say the corresponding pronouns.",
+    "quiz": [
+      [
+        "Plural you in Mexico?",
+        [
+          "ellos",
+          "ustedes",
+          "nosotros"
+        ],
+        1,
+        "Ustedes addresses multiple people."
+      ],
+      [
+        "Which means we?",
+        [
+          "nosotros",
+          "ellos",
+          "yo"
+        ],
+        0,
+        "Nosotros includes the speaker."
+      ],
+      [
+        "Which is respectful singular you?",
+        [
+          "tú",
+          "ella",
+          "usted"
+        ],
+        2,
+        "Usted is the respectful form."
+      ]
+    ]
+  },
+  "a0-05": {
+    "intro": "Spanish nouns have grammatical gender. Many ending in -o are masculine and many ending in -a feminine, but exceptions include la mano and el día. Learn nouns with their articles. Add -s after most unstressed vowels and -es after most consonants; final z changes to c before -es.",
+    "examples": [
+      [
+        "el libro / los libros",
+        "book / books"
+      ],
+      [
+        "la ciudad / las ciudades",
+        "city / cities"
+      ],
+      [
+        "la luz / las luces",
+        "light / lights"
+      ]
+    ],
+    "breakdown": "For ciudad, identify feminine gender, add -es for plural, then change la to las.",
+    "mistake": "Gender is not always predictable from spelling; la mano is feminine.",
+    "vocabulary": [
+      "mesa — table",
+      "día — day",
+      "mano — hand"
+    ],
+    "partner": "Name objects around you with articles, then make them plural.",
+    "quiz": [
+      [
+        "Plural of la luz?",
+        [
+          "las luzes",
+          "las luces",
+          "los luces"
+        ],
+        1,
+        "Z changes to c before -es."
+      ],
+      [
+        "Correct article for mano?",
+        [
+          "el",
+          "la"
+        ],
+        1,
+        "Mano is feminine."
+      ],
+      [
+        "Plural of el libro?",
+        [
+          "los libros",
+          "las libros"
+        ],
+        0,
+        "Libro is masculine."
+      ]
+    ]
+  },
+  "a0-06": {
+    "intro": "Definite articles el, la, los, las identify specific nouns. Indefinite articles un, una, unos, unas introduce nonspecific nouns or some items. Articles agree with noun gender and number.",
+    "examples": [
+      [
+        "un libro",
+        "a book"
+      ],
+      [
+        "la mesa",
+        "the table"
+      ],
+      [
+        "unas casas",
+        "some houses"
+      ]
+    ],
+    "breakdown": "For some houses, casa is feminine and plural casas, so choose unas.",
+    "mistake": "Do not use un with a feminine noun such as mesa.",
+    "vocabulary": [
+      "el — the",
+      "una — a",
+      "unos — some"
+    ],
+    "partner": "Ask your partner to identify a specific object and then an unspecified object.",
+    "quiz": [
+      [
+        "A table?",
+        [
+          "un mesa",
+          "una mesa",
+          "la mesa"
+        ],
+        1,
+        "Una is feminine indefinite singular."
+      ],
+      [
+        "The books?",
+        [
+          "los libros",
+          "unos libros"
+        ],
+        0,
+        "Los is definite plural masculine."
+      ],
+      [
+        "Some houses?",
+        [
+          "unos casas",
+          "unas casas"
+        ],
+        1,
+        "Unas agrees with casas."
+      ]
+    ]
+  },
+  "a0-07": {
+    "intro": "Ser expresses identity, origin, profession, characteristics and clock time. Present forms: soy, eres, es, somos, son (ustedes/ellos/ellas). Use de for origin. Professions normally omit an article after ser when unmodified.",
+    "examples": [
+      [
+        "Soy de México.",
+        "I am from Mexico."
+      ],
+      [
+        "Ella es médica.",
+        "She is a doctor."
+      ],
+      [
+        "Somos amigos.",
+        "We are friends."
+      ],
+      [
+        "Son las dos.",
+        "It is two o’clock."
+      ]
+    ],
+    "breakdown": "For I am from Mexico, choose yo, conjugate ser as soy, add de México. Yo can be omitted.",
+    "mistake": "Do not translate every English be as ser; location and many states use estar.",
+    "vocabulary": [
+      "origen — origin",
+      "amigo — friend",
+      "médica — doctor"
+    ],
+    "partner": "Ask ¿De dónde eres? and answer with your actual hometown.",
+    "quiz": [
+      [
+        "I am from Mexico?",
+        [
+          "Estoy de México",
+          "Soy de México"
+        ],
+        1,
+        "Origin uses ser."
+      ],
+      [
+        "We are friends?",
+        [
+          "Somos amigos",
+          "Son amigos"
+        ],
+        0,
+        "Somos agrees with nosotros."
+      ],
+      [
+        "Ustedes ___ estudiantes.",
+        [
+          "eres",
+          "son",
+          "soy"
+        ],
+        1,
+        "Ustedes takes son."
+      ]
+    ]
+  },
+  "a0-08": {
+    "intro": "Estar expresses location of people and objects, conditions and many emotional states. Present forms: estoy, estás, está, estamos, están. Ser versus estar is about meaning, not simply permanent versus temporary: Madrid está en España, and events use ser for location.",
+    "examples": [
+      [
+        "Estoy cansada.",
+        "I am tired."
+      ],
+      [
+        "El libro está aquí.",
+        "The book is here."
+      ],
+      [
+        "Estamos en casa.",
+        "We are at home."
+      ]
+    ],
+    "breakdown": "Choose estar for your location; for we, use estamos; add en casa.",
+    "mistake": "Do not use ser for a person's location. An event is different: La fiesta es en casa.",
+    "vocabulary": [
+      "aquí — here",
+      "cansado — tired",
+      "casa — home"
+    ],
+    "partner": "Ask ¿Dónde estás? and ¿Cómo estás? and answer both.",
+    "quiz": [
+      [
+        "The book is here?",
+        [
+          "El libro es aquí",
+          "El libro está aquí"
+        ],
+        1,
+        "Object location uses estar."
+      ],
+      [
+        "We are at home?",
+        [
+          "Estamos en casa",
+          "Somos en casa"
+        ],
+        0,
+        "Estamos is the nosotros form."
+      ],
+      [
+        "I am tired?",
+        [
+          "Soy cansado",
+          "Estoy cansado"
+        ],
+        1,
+        "A current condition uses estar."
+      ]
+    ]
+  },
+  "a0-09": {
+    "intro": "A basic Spanish sentence often follows subject + verb + complement. Subjects can be omitted. Adjectives commonly follow nouns and agree in gender and number; some adjectives precede nouns or change meaning by position.",
+    "examples": [
+      [
+        "Ana habla español.",
+        "Ana speaks Spanish."
+      ],
+      [
+        "Tengo un libro rojo.",
+        "I have a red book."
+      ],
+      [
+        "Las casas son blancas.",
+        "The houses are white."
+      ]
+    ],
+    "breakdown": "Start with las casas, use son for plural subject, then blancas to match feminine plural.",
+    "mistake": "Do not leave adjectives in masculine singular when describing feminine plural nouns.",
+    "vocabulary": [
+      "hablar — speak",
+      "tener — have",
+      "rojo — red"
+    ],
+    "partner": "Describe three objects using a noun, article and adjective.",
+    "quiz": [
+      [
+        "The white houses?",
+        [
+          "las casas blancas",
+          "las casas blanco"
+        ],
+        0,
+        "Blancas agrees with casas."
+      ],
+      [
+        "I have a book?",
+        [
+          "Tengo un libro",
+          "Tiene un libro"
+        ],
+        0,
+        "Tengo is first person."
+      ],
+      [
+        "Ana speaks Spanish?",
+        [
+          "Ana habla español",
+          "Ana hablan español"
+        ],
+        0,
+        "Habla agrees with Ana."
+      ]
+    ]
+  },
+  "a0-10": {
+    "intro": "Use opening and closing question marks. Yes/no questions can keep statement word order with questioning intonation. Question words carry accents: qué, quién, dónde, cuándo, cómo, cuánto, por qué. Put no before the conjugated verb to negate.",
+    "examples": [
+      [
+        "¿Hablas español?",
+        "Do you speak Spanish?"
+      ],
+      [
+        "¿Dónde vives?",
+        "Where do you live?"
+      ],
+      [
+        "No hablo español.",
+        "I do not speak Spanish."
+      ],
+      [
+        "¿Por qué? / Porque…",
+        "Why? / Because…"
+      ]
+    ],
+    "breakdown": "Start with hablo español; place no before hablo to negate. For a question about location use dónde plus the appropriate verb.",
+    "mistake": "Do not add an equivalent of English do to form ordinary Spanish questions.",
+    "vocabulary": [
+      "dónde — where",
+      "cuándo — when",
+      "qué — what"
+    ],
+    "partner": "Ask three questions and answer one negatively.",
+    "quiz": [
+      [
+        "Where do you live?",
+        [
+          "¿Dónde vives?",
+          "¿Cuándo vives?"
+        ],
+        0,
+        "Dónde asks location."
+      ],
+      [
+        "I do not speak Spanish?",
+        [
+          "Hablo no español",
+          "No hablo español"
+        ],
+        1,
+        "No precedes the verb."
+      ],
+      [
+        "Why?",
+        [
+          "¿Porque?",
+          "¿Por qué?"
+        ],
+        1,
+        "Por qué is interrogative."
+      ]
+    ]
+  },
+  "a0-11": {
+    "intro": "Learn cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez; eleven to fifteen are once, doce, trece, catorce, quince; sixteen to nineteen use dieci-; twenty is veinte, twenty-one veintiuno; thirty treinta, forty cuarenta, fifty cincuenta. From 31 use tens + y + units. Dates use day + de + month; months and weekdays are lowercase. Time uses es la una and son las dos, etc.",
+    "examples": [
+      [
+        "treinta y dos",
+        "32"
+      ],
+      [
+        "el 5 de mayo",
+        "May 5"
+      ],
+      [
+        "Son las tres y media.",
+        "It is 3:30."
+      ],
+      [
+        "Es la una.",
+        "It is 1:00."
+      ]
+    ],
+    "breakdown": "For 32 combine treinta + y + dos. For 3:30 use son las tres + y media.",
+    "mistake": "Use es la una for one o’clock, not son las una.",
+    "vocabulary": [
+      "lunes — Monday",
+      "enero — January",
+      "hora — hour"
+    ],
+    "partner": "Ask each other the time, birthday and a number between 1 and 50.",
+    "quiz": [
+      [
+        "32?",
+        [
+          "treinta y dos",
+          "veintidós",
+          "trece"
+        ],
+        0,
+        "Thirty plus two."
+      ],
+      [
+        "1:00?",
+        [
+          "Son las una",
+          "Es la una"
+        ],
+        1,
+        "One uses singular es la."
+      ],
+      [
+        "May 5?",
+        [
+          "el mayo de cinco",
+          "el cinco de mayo"
+        ],
+        1,
+        "Day precedes month."
+      ]
+    ]
+  },
+  "a0-12": {
+    "intro": "Combine greetings, identity, origin, location and questions. Use polite phrases to manage misunderstandings: perdón, no entiendo, ¿puedes repetir?, más despacio, por favor. Use ¿puede repetir? with usted.",
+    "examples": [
+      [
+        "Hola, ¿cómo te llamas?",
+        "Hello, what is your name?"
+      ],
+      [
+        "Soy Ana. ¿De dónde eres?",
+        "I am Ana. Where are you from?"
+      ],
+      [
+        "No entiendo. ¿Puedes repetir?",
+        "I don’t understand. Can you repeat?"
+      ],
+      [
+        "Hasta luego.",
+        "See you later."
+      ]
+    ],
+    "breakdown": "Greet, introduce yourself, ask a question, listen, request clarification if necessary, and close politely.",
+    "mistake": "Do not switch to English immediately when confused; try a clarification phrase first.",
+    "vocabulary": [
+      "perdón — excuse me",
+      "despacio — slowly",
+      "por favor — please"
+    ],
+    "partner": "Have a two-minute conversation without reading; swap roles and repeat with usted.",
+    "quiz": [
+      [
+        "I don’t understand?",
+        [
+          "No entiendo",
+          "No estoy"
+        ],
+        0,
+        "Entiendo means I understand."
+      ],
+      [
+        "Can you repeat? (formal)",
+        [
+          "¿Puedes repetir?",
+          "¿Puede repetir?"
+        ],
+        1,
+        "Puede agrees with usted."
+      ],
+      [
+        "Where are you from?",
+        [
+          "¿Dónde estás?",
+          "¿De dónde eres?"
+        ],
+        1,
+        "De dónde asks origin."
+      ]
+    ]
+  }
 };
 function setSection(s){section=s;lessonId=null;render()}
 function openLesson(id){lessonId=id;section='Curriculum';render();window.scrollTo(0,0)}
 function render(){renderAccount();nav.innerHTML=sections.map(s=>`<button class="${section===s?'active':''}" data-section="${esc(s)}">${esc(s)}</button>`).join('');nav.querySelectorAll('button').forEach(b=>b.onclick=()=>setSection(b.dataset.section));root.innerHTML=lessonId?renderLesson(lessonId):({Home:home,Curriculum:course,Vocabulary:words,'Verb Lab':verbLab,Conversation:conversation,'Practice Together':partnerPractice,Practice:practice}[section])();root.querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>openLesson(b.dataset.lesson));root.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>setSection(b.dataset.goto));if(lessonId)wireLesson();if(section==='Vocabulary'&&!lessonId)wireSearch();if(section==='Practice Together'&&!lessonId)wirePartner()}
 function home(){let done=saved().length,total=a0().length,next=a0().find(l=>!saved().includes(l.id));return `<div class="eyebrow">Mi centro de aprendizaje</div><h1>¡Vamos a aprender!</h1><p class="muted">Your Mexican Spanish learning center. Start from zero, learn the rules, and practice speaking naturally.</p><div class="grid"><div class="card"><div class="stat">A0</div>Current level</div><div class="card"><div class="stat">${done}/${total}</div>Foundation lessons complete</div><div class="card"><div class="stat">${vocab.length}</div>Starter vocabulary words</div></div><div class="card"><h2>Your progress</h2><div class="progress"><div style="width:${done/total*100}%"></div></div><p class="muted">${Math.round(done/total*100)}% of A0 complete</p>${next?`<h3>Up next: ${esc(next.title)}</h3><p>${esc(next.summary)}</p><button data-lesson="${next.id}">Open lesson →</button>`:'<p>¡Felicidades! You completed all A0 lessons.</p>'}</div><div class="grid">${sections.slice(1).map(s=>`<div class="card"><h3>${esc(s)}</h3><p class="muted">${({Curriculum:'Follow the learning path.',Vocabulary:'Explore useful Mexican Spanish words.','Verb Lab':'Study conjugation patterns.',Conversation:'Read realistic dialogues.','Practice Together':'Practice spoken Spanish with a partner.',Practice:'Review what you have learned.'})[s]}</p><button class="secondary" data-goto="${esc(s)}">Explore →</button></div>`).join('')}</div>`}
 function course(){return `<div class="eyebrow">Structured learning</div><h1>Curriculum</h1><p class="muted">A0 foundations first. Higher-level courses are planned and will be developed progressively.</p>${curriculum.levels.map(level=>`<div class="card"><h2>${esc(level.title)}</h2>${level.description?`<p class="muted">${esc(level.description)}</p>`:''}${level.lessons.length?level.lessons.map((l,i)=>`<div class="lesson-row"><div><strong>${String(i+1).padStart(2,'0')} · ${esc(l.title)}</strong><div class="muted">${esc(l.summary)}</div></div><div><span class="pill">${saved().includes(l.id)?'Completed':lessonContent[l.id]?'Available':'Coming soon'}</span> ${lessonContent[l.id]?`<button data-lesson="${l.id}">Study</button>`:''}</div></div>`).join(''):'<p class="muted">Coming in a future curriculum release.</p>'}</div>`).join('')}`}
-function renderLesson(id){let l=a0().find(x=>x.id===id),c=lessonContent[id];if(!l||!c)return '<p>Lesson not available yet.</p>';return `<button class="secondary" id="back">← Curriculum</button><div class="eyebrow" style="margin-top:20px">${esc(id.toUpperCase())} · Study guide</div><h1>${esc(l.title)}</h1><div class="card"><h2>1. Learn</h2><p>${esc(c.intro)}</p><h2>2. Examples</h2>${c.examples.map(x=>`<div class="example"><strong>${esc(x[0])}</strong><div>${esc(x[1])}</div></div>`).join('')}<h2>3. Step-by-step breakdown</h2><p>${esc(c.breakdown)}</p><h2>4. Practice & test</h2><div class="question"><strong>${esc(c.question)}</strong><div>${c.options.map((o,i)=>`<label><input type="radio" name="quiz" value="${i}"> ${esc(o)}</label>`).join('')}</div><button id="check">Check answer</button><p class="feedback" id="feedback" role="status"></p></div><button id="complete" disabled>Mark lesson complete</button></div>`}
-function wireLesson(){document.querySelector('#back').onclick=()=>setSection('Curriculum');document.querySelector('#check').onclick=()=>{let c=lessonContent[lessonId],selected=document.querySelector('input[name="quiz"]:checked'),f=document.querySelector('#feedback');if(!selected){f.textContent='Choose an answer first.';return}let good=Number(selected.value)===c.answer;f.className='feedback '+(good?'correct':'incorrect');f.textContent=(good?'¡Correcto! ':'Try again. ')+c.explanation;if(good)document.querySelector('#complete').disabled=false};document.querySelector('#complete').onclick=async()=>{let b=document.querySelector('#complete');b.disabled=true;try{await completeLesson(lessonId);setSection('Curriculum')}catch(e){document.querySelector('#feedback').textContent=humanError(e);b.disabled=false}}}
+function renderLesson(id){const l=a0().find(x=>x.id===id),c=lessonContent[id];if(!l||!c)return '<p>Lesson not available yet.</p>';return `<button class="secondary" id="back">← Curriculum</button><h1>${esc(l.title)}</h1><div class="card"><h2>1. Learn</h2><p>${esc(c.intro)}</p><h2>2. Examples</h2>${c.examples.map(x=>`<div class="example"><strong>${esc(x[0])}</strong><div>${esc(x[1])}</div></div>`).join('')}<h2>3. Step-by-step breakdown</h2><p>${esc(c.breakdown)}</p><h2>4. Common mistakes</h2><p>${esc(c.mistake)}</p><h2>5. Vocabulary</h2><ul>${c.vocabulary.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h2>6. Practice together</h2><p>${esc(c.partner)}</p><h2>7. Knowledge check</h2>${c.quiz.map((q,i)=>`<div class="question"><strong>${i+1}. ${esc(q[0])}</strong><div>${q[1].map((o,j)=>`<label><input type="radio" name="quiz-${i}" value="${j}"> ${esc(o)}</label>`).join('')}</div><p id="feedback-${i}" role="status"></p></div>`).join('')}<button id="check">Check answers</button><p id="feedback" role="status"></p><button id="complete" disabled>Mark lesson complete</button></div>`}
+function wireLesson(){document.querySelector('#back').onclick=()=>setSection('Curriculum');const c=lessonContent[lessonId],b=document.querySelector('#complete'),f=document.querySelector('#feedback');document.querySelector('#check').onclick=()=>{let score=0;c.quiz.forEach((q,i)=>{const selected=document.querySelector('input[name="quiz-'+i+'"]:checked'),good=selected&&Number(selected.value)===q[2];if(good)score++;document.querySelector('#feedback-'+i).textContent=good?'¡Correcto! '+q[3]:selected?'Try again. '+q[3]:'Choose an answer.'});f.textContent=score+'/'+c.quiz.length+' correct';b.disabled=score!==c.quiz.length};root.querySelectorAll('input[type="radio"]').forEach(x=>x.onchange=()=>{b.disabled=true});b.onclick=async()=>{b.disabled=true;try{await completeLesson(lessonId);setSection('Curriculum')}catch(e){f.textContent=humanError(e);b.disabled=false}}}
 function words(){return `<div class="eyebrow">Word bank</div><h1>Vocabulary</h1><p class="muted">A starter collection with Mexican usage notes. More vocabulary will be added with future lessons.</p><input type="search" id="search" placeholder="Search Spanish or English..." aria-label="Search vocabulary"><div id="results"></div>`}
 function wireSearch(){let input=document.querySelector('#search'),results=document.querySelector('#results');function update(){let q=input.value.toLocaleLowerCase();results.innerHTML=vocab.filter(w=>(w.es+' '+w.en+' '+w.note).toLocaleLowerCase().includes(q)).map(w=>`<div class="card"><h3>${esc(w.es)}</h3><div>${esc(w.en)}</div><p class="muted">${esc(w.note)}</p></div>`).join('')||'<p>No matching words.</p>'}input.oninput=update;update()}
 function verbLab(){return `<div class="eyebrow">Grammar reference</div><h1>Verb Lab</h1><p class="muted">Present-tense forms used in Mexican Spanish. Ustedes is the everyday plural “you” form.</p>${verbs.map(v=>`<div class="card"><h2>${esc(v.verb)} <small class="muted">— ${esc(v.meaning)}</small></h2>${Object.entries(v.present).map(([p,f])=>`<div class="lesson-row"><span>${esc(p)}</span><strong>${esc(f)}</strong></div>`).join('')}</div>`).join('')}`}

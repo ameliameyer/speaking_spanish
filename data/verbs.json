@@ -1,1 +1,1542 @@
-[{"verb":"ser","meaning":"to be (identity/origin)","present":{"yo":"soy","tú":"eres","usted/él/ella":"es","nosotros":"somos","ustedes/ellos/ellas":"son"}},{"verb":"estar","meaning":"to be (location/state)","present":{"yo":"estoy","tú":"estás","usted/él/ella":"está","nosotros":"estamos","ustedes/ellos/ellas":"están"}}]
+[
+  {
+    "verb": "ser",
+    "meaning": "to be (identity)",
+    "type": "irregular",
+    "example": "Soy de México.",
+    "present": {
+      "yo": "soy",
+      "tú": "eres",
+      "usted/él/ella": "es",
+      "nosotros/as": "somos",
+      "ustedes/ellos/ellas": "son"
+    },
+    "preterite": {
+      "yo": "fui",
+      "tú": "fuiste",
+      "usted/él/ella": "fue",
+      "nosotros/as": "fuimos",
+      "ustedes/ellos/ellas": "fueron"
+    },
+    "imperfect": {
+      "yo": "era",
+      "tú": "eras",
+      "usted/él/ella": "era",
+      "nosotros/as": "éramos",
+      "ustedes/ellos/ellas": "eran"
+    },
+    "future": {
+      "yo": "seré",
+      "tú": "serás",
+      "usted/él/ella": "será",
+      "nosotros/as": "seremos",
+      "ustedes/ellos/ellas": "serán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "estar",
+    "meaning": "to be (state/location)",
+    "type": "irregular",
+    "example": "Estoy en casa.",
+    "present": {
+      "yo": "estoy",
+      "tú": "estás",
+      "usted/él/ella": "está",
+      "nosotros/as": "estamos",
+      "ustedes/ellos/ellas": "están"
+    },
+    "preterite": {
+      "yo": "estuve",
+      "tú": "estuviste",
+      "usted/él/ella": "estuvo",
+      "nosotros/as": "estuvimos",
+      "ustedes/ellos/ellas": "estuvieron"
+    },
+    "imperfect": {
+      "yo": "estaba",
+      "tú": "estabas",
+      "usted/él/ella": "estaba",
+      "nosotros/as": "estábamos",
+      "ustedes/ellos/ellas": "estaban"
+    },
+    "future": {
+      "yo": "estaré",
+      "tú": "estarás",
+      "usted/él/ella": "estará",
+      "nosotros/as": "estaremos",
+      "ustedes/ellos/ellas": "estarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "haber",
+    "meaning": "to have (auxiliary); there is",
+    "type": "irregular",
+    "example": "Hay agua.",
+    "present": {
+      "yo": "he",
+      "tú": "has",
+      "usted/él/ella": "ha",
+      "nosotros/as": "hemos",
+      "ustedes/ellos/ellas": "han"
+    },
+    "preterite": {
+      "yo": "hube",
+      "tú": "hubiste",
+      "usted/él/ella": "hubo",
+      "nosotros/as": "hubimos",
+      "ustedes/ellos/ellas": "hubieron"
+    },
+    "imperfect": {
+      "yo": "había",
+      "tú": "habías",
+      "usted/él/ella": "había",
+      "nosotros/as": "habíamos",
+      "ustedes/ellos/ellas": "habían"
+    },
+    "future": {
+      "yo": "habré",
+      "tú": "habrás",
+      "usted/él/ella": "habrá",
+      "nosotros/as": "habremos",
+      "ustedes/ellos/ellas": "habrán"
+    },
+    "note": "Auxiliary forms shown. Impersonal existence uses hay, hubo, había, habrá."
+  },
+  {
+    "verb": "tener",
+    "meaning": "to have",
+    "type": "irregular",
+    "example": "Tengo un libro.",
+    "present": {
+      "yo": "tengo",
+      "tú": "tienes",
+      "usted/él/ella": "tiene",
+      "nosotros/as": "tenemos",
+      "ustedes/ellos/ellas": "tienen"
+    },
+    "preterite": {
+      "yo": "tuve",
+      "tú": "tuviste",
+      "usted/él/ella": "tuvo",
+      "nosotros/as": "tuvimos",
+      "ustedes/ellos/ellas": "tuvieron"
+    },
+    "imperfect": {
+      "yo": "tenía",
+      "tú": "tenías",
+      "usted/él/ella": "tenía",
+      "nosotros/as": "teníamos",
+      "ustedes/ellos/ellas": "tenían"
+    },
+    "future": {
+      "yo": "tendré",
+      "tú": "tendrás",
+      "usted/él/ella": "tendrá",
+      "nosotros/as": "tendremos",
+      "ustedes/ellos/ellas": "tendrán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "necesitar",
+    "meaning": "to need",
+    "type": "regular",
+    "example": "Necesito ayuda.",
+    "present": {
+      "yo": "necesito",
+      "tú": "necesitas",
+      "usted/él/ella": "necesita",
+      "nosotros/as": "necesitamos",
+      "ustedes/ellos/ellas": "necesitan"
+    },
+    "preterite": {
+      "yo": "necesité",
+      "tú": "necesitaste",
+      "usted/él/ella": "necesitó",
+      "nosotros/as": "necesitamos",
+      "ustedes/ellos/ellas": "necesitaron"
+    },
+    "imperfect": {
+      "yo": "necesitaba",
+      "tú": "necesitabas",
+      "usted/él/ella": "necesitaba",
+      "nosotros/as": "necesitábamos",
+      "ustedes/ellos/ellas": "necesitaban"
+    },
+    "future": {
+      "yo": "necesitaré",
+      "tú": "necesitarás",
+      "usted/él/ella": "necesitará",
+      "nosotros/as": "necesitaremos",
+      "ustedes/ellos/ellas": "necesitarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "ir",
+    "meaning": "to go",
+    "type": "irregular",
+    "example": "Voy a casa.",
+    "present": {
+      "yo": "voy",
+      "tú": "vas",
+      "usted/él/ella": "va",
+      "nosotros/as": "vamos",
+      "ustedes/ellos/ellas": "van"
+    },
+    "preterite": {
+      "yo": "fui",
+      "tú": "fuiste",
+      "usted/él/ella": "fue",
+      "nosotros/as": "fuimos",
+      "ustedes/ellos/ellas": "fueron"
+    },
+    "imperfect": {
+      "yo": "iba",
+      "tú": "ibas",
+      "usted/él/ella": "iba",
+      "nosotros/as": "íbamos",
+      "ustedes/ellos/ellas": "iban"
+    },
+    "future": {
+      "yo": "iré",
+      "tú": "irás",
+      "usted/él/ella": "irá",
+      "nosotros/as": "iremos",
+      "ustedes/ellos/ellas": "irán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "venir",
+    "meaning": "to come",
+    "type": "irregular",
+    "example": "Vengo de México.",
+    "present": {
+      "yo": "vengo",
+      "tú": "vienes",
+      "usted/él/ella": "viene",
+      "nosotros/as": "venimos",
+      "ustedes/ellos/ellas": "vienen"
+    },
+    "preterite": {
+      "yo": "vine",
+      "tú": "viniste",
+      "usted/él/ella": "vino",
+      "nosotros/as": "vinimos",
+      "ustedes/ellos/ellas": "vinieron"
+    },
+    "imperfect": {
+      "yo": "venía",
+      "tú": "venías",
+      "usted/él/ella": "venía",
+      "nosotros/as": "veníamos",
+      "ustedes/ellos/ellas": "venían"
+    },
+    "future": {
+      "yo": "vendré",
+      "tú": "vendrás",
+      "usted/él/ella": "vendrá",
+      "nosotros/as": "vendremos",
+      "ustedes/ellos/ellas": "vendrán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "salir",
+    "meaning": "to leave",
+    "type": "irregular",
+    "example": "Salgo temprano.",
+    "present": {
+      "yo": "salgo",
+      "tú": "sales",
+      "usted/él/ella": "sale",
+      "nosotros/as": "salimos",
+      "ustedes/ellos/ellas": "salen"
+    },
+    "preterite": {
+      "yo": "salí",
+      "tú": "saliste",
+      "usted/él/ella": "salió",
+      "nosotros/as": "salimos",
+      "ustedes/ellos/ellas": "salieron"
+    },
+    "imperfect": {
+      "yo": "salía",
+      "tú": "salías",
+      "usted/él/ella": "salía",
+      "nosotros/as": "salíamos",
+      "ustedes/ellos/ellas": "salían"
+    },
+    "future": {
+      "yo": "saldré",
+      "tú": "saldrás",
+      "usted/él/ella": "saldrá",
+      "nosotros/as": "saldremos",
+      "ustedes/ellos/ellas": "saldrán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "llegar",
+    "meaning": "to arrive",
+    "type": "spelling change",
+    "example": "Llego a las dos.",
+    "present": {
+      "yo": "llego",
+      "tú": "llegas",
+      "usted/él/ella": "llega",
+      "nosotros/as": "llegamos",
+      "ustedes/ellos/ellas": "llegan"
+    },
+    "preterite": {
+      "yo": "llegué",
+      "tú": "llegaste",
+      "usted/él/ella": "llegó",
+      "nosotros/as": "llegamos",
+      "ustedes/ellos/ellas": "llegaron"
+    },
+    "imperfect": {
+      "yo": "llegaba",
+      "tú": "llegabas",
+      "usted/él/ella": "llegaba",
+      "nosotros/as": "llegábamos",
+      "ustedes/ellos/ellas": "llegaban"
+    },
+    "future": {
+      "yo": "llegaré",
+      "tú": "llegarás",
+      "usted/él/ella": "llegará",
+      "nosotros/as": "llegaremos",
+      "ustedes/ellos/ellas": "llegarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "caminar",
+    "meaning": "to walk",
+    "type": "regular",
+    "example": "Camino al parque.",
+    "present": {
+      "yo": "camino",
+      "tú": "caminas",
+      "usted/él/ella": "camina",
+      "nosotros/as": "caminamos",
+      "ustedes/ellos/ellas": "caminan"
+    },
+    "preterite": {
+      "yo": "caminé",
+      "tú": "caminaste",
+      "usted/él/ella": "caminó",
+      "nosotros/as": "caminamos",
+      "ustedes/ellos/ellas": "caminaron"
+    },
+    "imperfect": {
+      "yo": "caminaba",
+      "tú": "caminabas",
+      "usted/él/ella": "caminaba",
+      "nosotros/as": "caminábamos",
+      "ustedes/ellos/ellas": "caminaban"
+    },
+    "future": {
+      "yo": "caminaré",
+      "tú": "caminarás",
+      "usted/él/ella": "caminará",
+      "nosotros/as": "caminaremos",
+      "ustedes/ellos/ellas": "caminarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "hablar",
+    "meaning": "to speak",
+    "type": "regular",
+    "example": "Hablo español.",
+    "present": {
+      "yo": "hablo",
+      "tú": "hablas",
+      "usted/él/ella": "habla",
+      "nosotros/as": "hablamos",
+      "ustedes/ellos/ellas": "hablan"
+    },
+    "preterite": {
+      "yo": "hablé",
+      "tú": "hablaste",
+      "usted/él/ella": "habló",
+      "nosotros/as": "hablamos",
+      "ustedes/ellos/ellas": "hablaron"
+    },
+    "imperfect": {
+      "yo": "hablaba",
+      "tú": "hablabas",
+      "usted/él/ella": "hablaba",
+      "nosotros/as": "hablábamos",
+      "ustedes/ellos/ellas": "hablaban"
+    },
+    "future": {
+      "yo": "hablaré",
+      "tú": "hablarás",
+      "usted/él/ella": "hablará",
+      "nosotros/as": "hablaremos",
+      "ustedes/ellos/ellas": "hablarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "decir",
+    "meaning": "to say",
+    "type": "irregular",
+    "example": "Digo la verdad.",
+    "present": {
+      "yo": "digo",
+      "tú": "dices",
+      "usted/él/ella": "dice",
+      "nosotros/as": "decimos",
+      "ustedes/ellos/ellas": "dicen"
+    },
+    "preterite": {
+      "yo": "dije",
+      "tú": "dijiste",
+      "usted/él/ella": "dijo",
+      "nosotros/as": "dijimos",
+      "ustedes/ellos/ellas": "dijeron"
+    },
+    "imperfect": {
+      "yo": "decía",
+      "tú": "decías",
+      "usted/él/ella": "decía",
+      "nosotros/as": "decíamos",
+      "ustedes/ellos/ellas": "decían"
+    },
+    "future": {
+      "yo": "diré",
+      "tú": "dirás",
+      "usted/él/ella": "dirá",
+      "nosotros/as": "diremos",
+      "ustedes/ellos/ellas": "dirán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "preguntar",
+    "meaning": "to ask",
+    "type": "regular",
+    "example": "Pregunto por el precio.",
+    "present": {
+      "yo": "pregunto",
+      "tú": "preguntas",
+      "usted/él/ella": "pregunta",
+      "nosotros/as": "preguntamos",
+      "ustedes/ellos/ellas": "preguntan"
+    },
+    "preterite": {
+      "yo": "pregunté",
+      "tú": "preguntaste",
+      "usted/él/ella": "preguntó",
+      "nosotros/as": "preguntamos",
+      "ustedes/ellos/ellas": "preguntaron"
+    },
+    "imperfect": {
+      "yo": "preguntaba",
+      "tú": "preguntabas",
+      "usted/él/ella": "preguntaba",
+      "nosotros/as": "preguntábamos",
+      "ustedes/ellos/ellas": "preguntaban"
+    },
+    "future": {
+      "yo": "preguntaré",
+      "tú": "preguntarás",
+      "usted/él/ella": "preguntará",
+      "nosotros/as": "preguntaremos",
+      "ustedes/ellos/ellas": "preguntarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "responder",
+    "meaning": "to answer",
+    "type": "regular",
+    "example": "Respondo la pregunta.",
+    "present": {
+      "yo": "respondo",
+      "tú": "respondes",
+      "usted/él/ella": "responde",
+      "nosotros/as": "respondemos",
+      "ustedes/ellos/ellas": "responden"
+    },
+    "preterite": {
+      "yo": "respondí",
+      "tú": "respondiste",
+      "usted/él/ella": "respondió",
+      "nosotros/as": "respondimos",
+      "ustedes/ellos/ellas": "respondieron"
+    },
+    "imperfect": {
+      "yo": "respondía",
+      "tú": "respondías",
+      "usted/él/ella": "respondía",
+      "nosotros/as": "respondíamos",
+      "ustedes/ellos/ellas": "respondían"
+    },
+    "future": {
+      "yo": "responderé",
+      "tú": "responderás",
+      "usted/él/ella": "responderá",
+      "nosotros/as": "responderemos",
+      "ustedes/ellos/ellas": "responderán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "saber",
+    "meaning": "to know (facts)",
+    "type": "irregular",
+    "example": "No sé.",
+    "present": {
+      "yo": "sé",
+      "tú": "sabes",
+      "usted/él/ella": "sabe",
+      "nosotros/as": "sabemos",
+      "ustedes/ellos/ellas": "saben"
+    },
+    "preterite": {
+      "yo": "supe",
+      "tú": "supiste",
+      "usted/él/ella": "supo",
+      "nosotros/as": "supimos",
+      "ustedes/ellos/ellas": "supieron"
+    },
+    "imperfect": {
+      "yo": "sabía",
+      "tú": "sabías",
+      "usted/él/ella": "sabía",
+      "nosotros/as": "sabíamos",
+      "ustedes/ellos/ellas": "sabían"
+    },
+    "future": {
+      "yo": "sabré",
+      "tú": "sabrás",
+      "usted/él/ella": "sabrá",
+      "nosotros/as": "sabremos",
+      "ustedes/ellos/ellas": "sabrán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "conocer",
+    "meaning": "to know (people/places)",
+    "type": "irregular",
+    "example": "Conozco la ciudad.",
+    "present": {
+      "yo": "conozco",
+      "tú": "conoces",
+      "usted/él/ella": "conoce",
+      "nosotros/as": "conocemos",
+      "ustedes/ellos/ellas": "conocen"
+    },
+    "preterite": {
+      "yo": "conocí",
+      "tú": "conociste",
+      "usted/él/ella": "conoció",
+      "nosotros/as": "conocimos",
+      "ustedes/ellos/ellas": "conocieron"
+    },
+    "imperfect": {
+      "yo": "conocía",
+      "tú": "conocías",
+      "usted/él/ella": "conocía",
+      "nosotros/as": "conocíamos",
+      "ustedes/ellos/ellas": "conocían"
+    },
+    "future": {
+      "yo": "conoceré",
+      "tú": "conocerás",
+      "usted/él/ella": "conocerá",
+      "nosotros/as": "conoceremos",
+      "ustedes/ellos/ellas": "conocerán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "entender",
+    "meaning": "to understand",
+    "type": "stem-changing",
+    "example": "No entiendo.",
+    "present": {
+      "yo": "entiendo",
+      "tú": "entiendes",
+      "usted/él/ella": "entiende",
+      "nosotros/as": "entendemos",
+      "ustedes/ellos/ellas": "entienden"
+    },
+    "preterite": {
+      "yo": "entendí",
+      "tú": "entendiste",
+      "usted/él/ella": "entendió",
+      "nosotros/as": "entendimos",
+      "ustedes/ellos/ellas": "entendieron"
+    },
+    "imperfect": {
+      "yo": "entendía",
+      "tú": "entendías",
+      "usted/él/ella": "entendía",
+      "nosotros/as": "entendíamos",
+      "ustedes/ellos/ellas": "entendían"
+    },
+    "future": {
+      "yo": "entenderé",
+      "tú": "entenderás",
+      "usted/él/ella": "entenderá",
+      "nosotros/as": "entenderemos",
+      "ustedes/ellos/ellas": "entenderán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "aprender",
+    "meaning": "to learn",
+    "type": "regular",
+    "example": "Aprendo español.",
+    "present": {
+      "yo": "aprendo",
+      "tú": "aprendes",
+      "usted/él/ella": "aprende",
+      "nosotros/as": "aprendemos",
+      "ustedes/ellos/ellas": "aprenden"
+    },
+    "preterite": {
+      "yo": "aprendí",
+      "tú": "aprendiste",
+      "usted/él/ella": "aprendió",
+      "nosotros/as": "aprendimos",
+      "ustedes/ellos/ellas": "aprendieron"
+    },
+    "imperfect": {
+      "yo": "aprendía",
+      "tú": "aprendías",
+      "usted/él/ella": "aprendía",
+      "nosotros/as": "aprendíamos",
+      "ustedes/ellos/ellas": "aprendían"
+    },
+    "future": {
+      "yo": "aprenderé",
+      "tú": "aprenderás",
+      "usted/él/ella": "aprenderá",
+      "nosotros/as": "aprenderemos",
+      "ustedes/ellos/ellas": "aprenderán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "comer",
+    "meaning": "to eat",
+    "type": "regular",
+    "example": "Como tacos.",
+    "present": {
+      "yo": "como",
+      "tú": "comes",
+      "usted/él/ella": "come",
+      "nosotros/as": "comemos",
+      "ustedes/ellos/ellas": "comen"
+    },
+    "preterite": {
+      "yo": "comí",
+      "tú": "comiste",
+      "usted/él/ella": "comió",
+      "nosotros/as": "comimos",
+      "ustedes/ellos/ellas": "comieron"
+    },
+    "imperfect": {
+      "yo": "comía",
+      "tú": "comías",
+      "usted/él/ella": "comía",
+      "nosotros/as": "comíamos",
+      "ustedes/ellos/ellas": "comían"
+    },
+    "future": {
+      "yo": "comeré",
+      "tú": "comerás",
+      "usted/él/ella": "comerá",
+      "nosotros/as": "comeremos",
+      "ustedes/ellos/ellas": "comerán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "beber",
+    "meaning": "to drink",
+    "type": "regular",
+    "example": "Bebo agua.",
+    "present": {
+      "yo": "bebo",
+      "tú": "bebes",
+      "usted/él/ella": "bebe",
+      "nosotros/as": "bebemos",
+      "ustedes/ellos/ellas": "beben"
+    },
+    "preterite": {
+      "yo": "bebí",
+      "tú": "bebiste",
+      "usted/él/ella": "bebió",
+      "nosotros/as": "bebimos",
+      "ustedes/ellos/ellas": "bebieron"
+    },
+    "imperfect": {
+      "yo": "bebía",
+      "tú": "bebías",
+      "usted/él/ella": "bebía",
+      "nosotros/as": "bebíamos",
+      "ustedes/ellos/ellas": "bebían"
+    },
+    "future": {
+      "yo": "beberé",
+      "tú": "beberás",
+      "usted/él/ella": "beberá",
+      "nosotros/as": "beberemos",
+      "ustedes/ellos/ellas": "beberán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "vivir",
+    "meaning": "to live",
+    "type": "regular",
+    "example": "Vivo en México.",
+    "present": {
+      "yo": "vivo",
+      "tú": "vives",
+      "usted/él/ella": "vive",
+      "nosotros/as": "vivimos",
+      "ustedes/ellos/ellas": "viven"
+    },
+    "preterite": {
+      "yo": "viví",
+      "tú": "viviste",
+      "usted/él/ella": "vivió",
+      "nosotros/as": "vivimos",
+      "ustedes/ellos/ellas": "vivieron"
+    },
+    "imperfect": {
+      "yo": "vivía",
+      "tú": "vivías",
+      "usted/él/ella": "vivía",
+      "nosotros/as": "vivíamos",
+      "ustedes/ellos/ellas": "vivían"
+    },
+    "future": {
+      "yo": "viviré",
+      "tú": "vivirás",
+      "usted/él/ella": "vivirá",
+      "nosotros/as": "viviremos",
+      "ustedes/ellos/ellas": "vivirán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "trabajar",
+    "meaning": "to work",
+    "type": "regular",
+    "example": "Trabajo en casa.",
+    "present": {
+      "yo": "trabajo",
+      "tú": "trabajas",
+      "usted/él/ella": "trabaja",
+      "nosotros/as": "trabajamos",
+      "ustedes/ellos/ellas": "trabajan"
+    },
+    "preterite": {
+      "yo": "trabajé",
+      "tú": "trabajaste",
+      "usted/él/ella": "trabajó",
+      "nosotros/as": "trabajamos",
+      "ustedes/ellos/ellas": "trabajaron"
+    },
+    "imperfect": {
+      "yo": "trabajaba",
+      "tú": "trabajabas",
+      "usted/él/ella": "trabajaba",
+      "nosotros/as": "trabajábamos",
+      "ustedes/ellos/ellas": "trabajaban"
+    },
+    "future": {
+      "yo": "trabajaré",
+      "tú": "trabajarás",
+      "usted/él/ella": "trabajará",
+      "nosotros/as": "trabajaremos",
+      "ustedes/ellos/ellas": "trabajarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "dormir",
+    "meaning": "to sleep",
+    "type": "stem-changing",
+    "example": "Duermo bien.",
+    "present": {
+      "yo": "duermo",
+      "tú": "duermes",
+      "usted/él/ella": "duerme",
+      "nosotros/as": "dormimos",
+      "ustedes/ellos/ellas": "duermen"
+    },
+    "preterite": {
+      "yo": "dormí",
+      "tú": "dormiste",
+      "usted/él/ella": "durmió",
+      "nosotros/as": "dormimos",
+      "ustedes/ellos/ellas": "durmieron"
+    },
+    "imperfect": {
+      "yo": "dormía",
+      "tú": "dormías",
+      "usted/él/ella": "dormía",
+      "nosotros/as": "dormíamos",
+      "ustedes/ellos/ellas": "dormían"
+    },
+    "future": {
+      "yo": "dormiré",
+      "tú": "dormirás",
+      "usted/él/ella": "dormirá",
+      "nosotros/as": "dormiremos",
+      "ustedes/ellos/ellas": "dormirán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "querer",
+    "meaning": "to want",
+    "type": "irregular",
+    "example": "Quiero café.",
+    "present": {
+      "yo": "quiero",
+      "tú": "quieres",
+      "usted/él/ella": "quiere",
+      "nosotros/as": "queremos",
+      "ustedes/ellos/ellas": "quieren"
+    },
+    "preterite": {
+      "yo": "quise",
+      "tú": "quisiste",
+      "usted/él/ella": "quiso",
+      "nosotros/as": "quisimos",
+      "ustedes/ellos/ellas": "quisieron"
+    },
+    "imperfect": {
+      "yo": "quería",
+      "tú": "querías",
+      "usted/él/ella": "quería",
+      "nosotros/as": "queríamos",
+      "ustedes/ellos/ellas": "querían"
+    },
+    "future": {
+      "yo": "querré",
+      "tú": "querrás",
+      "usted/él/ella": "querrá",
+      "nosotros/as": "querremos",
+      "ustedes/ellos/ellas": "querrán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "poder",
+    "meaning": "to be able to",
+    "type": "irregular",
+    "example": "¿Puedes repetir?",
+    "present": {
+      "yo": "puedo",
+      "tú": "puedes",
+      "usted/él/ella": "puede",
+      "nosotros/as": "podemos",
+      "ustedes/ellos/ellas": "pueden"
+    },
+    "preterite": {
+      "yo": "pude",
+      "tú": "pudiste",
+      "usted/él/ella": "pudo",
+      "nosotros/as": "pudimos",
+      "ustedes/ellos/ellas": "pudieron"
+    },
+    "imperfect": {
+      "yo": "podía",
+      "tú": "podías",
+      "usted/él/ella": "podía",
+      "nosotros/as": "podíamos",
+      "ustedes/ellos/ellas": "podían"
+    },
+    "future": {
+      "yo": "podré",
+      "tú": "podrás",
+      "usted/él/ella": "podrá",
+      "nosotros/as": "podremos",
+      "ustedes/ellos/ellas": "podrán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "deber",
+    "meaning": "to owe; should",
+    "type": "regular",
+    "example": "Debo estudiar.",
+    "present": {
+      "yo": "debo",
+      "tú": "debes",
+      "usted/él/ella": "debe",
+      "nosotros/as": "debemos",
+      "ustedes/ellos/ellas": "deben"
+    },
+    "preterite": {
+      "yo": "debí",
+      "tú": "debiste",
+      "usted/él/ella": "debió",
+      "nosotros/as": "debimos",
+      "ustedes/ellos/ellas": "debieron"
+    },
+    "imperfect": {
+      "yo": "debía",
+      "tú": "debías",
+      "usted/él/ella": "debía",
+      "nosotros/as": "debíamos",
+      "ustedes/ellos/ellas": "debían"
+    },
+    "future": {
+      "yo": "deberé",
+      "tú": "deberás",
+      "usted/él/ella": "deberá",
+      "nosotros/as": "deberemos",
+      "ustedes/ellos/ellas": "deberán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "preferir",
+    "meaning": "to prefer",
+    "type": "stem-changing",
+    "example": "Prefiero té.",
+    "present": {
+      "yo": "prefiero",
+      "tú": "prefieres",
+      "usted/él/ella": "prefiere",
+      "nosotros/as": "preferimos",
+      "ustedes/ellos/ellas": "prefieren"
+    },
+    "preterite": {
+      "yo": "preferí",
+      "tú": "preferiste",
+      "usted/él/ella": "prefirió",
+      "nosotros/as": "preferimos",
+      "ustedes/ellos/ellas": "prefirieron"
+    },
+    "imperfect": {
+      "yo": "prefería",
+      "tú": "preferías",
+      "usted/él/ella": "prefería",
+      "nosotros/as": "preferíamos",
+      "ustedes/ellos/ellas": "preferían"
+    },
+    "future": {
+      "yo": "preferiré",
+      "tú": "preferirás",
+      "usted/él/ella": "preferirá",
+      "nosotros/as": "preferiremos",
+      "ustedes/ellos/ellas": "preferirán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "hacer",
+    "meaning": "to do; make",
+    "type": "irregular",
+    "example": "Hago la comida.",
+    "present": {
+      "yo": "hago",
+      "tú": "haces",
+      "usted/él/ella": "hace",
+      "nosotros/as": "hacemos",
+      "ustedes/ellos/ellas": "hacen"
+    },
+    "preterite": {
+      "yo": "hice",
+      "tú": "hiciste",
+      "usted/él/ella": "hizo",
+      "nosotros/as": "hicimos",
+      "ustedes/ellos/ellas": "hicieron"
+    },
+    "imperfect": {
+      "yo": "hacía",
+      "tú": "hacías",
+      "usted/él/ella": "hacía",
+      "nosotros/as": "hacíamos",
+      "ustedes/ellos/ellas": "hacían"
+    },
+    "future": {
+      "yo": "haré",
+      "tú": "harás",
+      "usted/él/ella": "hará",
+      "nosotros/as": "haremos",
+      "ustedes/ellos/ellas": "harán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "dar",
+    "meaning": "to give",
+    "type": "irregular",
+    "example": "Doy las gracias.",
+    "present": {
+      "yo": "doy",
+      "tú": "das",
+      "usted/él/ella": "da",
+      "nosotros/as": "damos",
+      "ustedes/ellos/ellas": "dan"
+    },
+    "preterite": {
+      "yo": "di",
+      "tú": "diste",
+      "usted/él/ella": "dio",
+      "nosotros/as": "dimos",
+      "ustedes/ellos/ellas": "dieron"
+    },
+    "imperfect": {
+      "yo": "daba",
+      "tú": "dabas",
+      "usted/él/ella": "daba",
+      "nosotros/as": "dábamos",
+      "ustedes/ellos/ellas": "daban"
+    },
+    "future": {
+      "yo": "daré",
+      "tú": "darás",
+      "usted/él/ella": "dará",
+      "nosotros/as": "daremos",
+      "ustedes/ellos/ellas": "darán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "poner",
+    "meaning": "to put",
+    "type": "irregular",
+    "example": "Pongo el libro aquí.",
+    "present": {
+      "yo": "pongo",
+      "tú": "pones",
+      "usted/él/ella": "pone",
+      "nosotros/as": "ponemos",
+      "ustedes/ellos/ellas": "ponen"
+    },
+    "preterite": {
+      "yo": "puse",
+      "tú": "pusiste",
+      "usted/él/ella": "puso",
+      "nosotros/as": "pusimos",
+      "ustedes/ellos/ellas": "pusieron"
+    },
+    "imperfect": {
+      "yo": "ponía",
+      "tú": "ponías",
+      "usted/él/ella": "ponía",
+      "nosotros/as": "poníamos",
+      "ustedes/ellos/ellas": "ponían"
+    },
+    "future": {
+      "yo": "pondré",
+      "tú": "pondrás",
+      "usted/él/ella": "pondrá",
+      "nosotros/as": "pondremos",
+      "ustedes/ellos/ellas": "pondrán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "tomar",
+    "meaning": "to take; drink",
+    "type": "regular",
+    "example": "Tomo café.",
+    "present": {
+      "yo": "tomo",
+      "tú": "tomas",
+      "usted/él/ella": "toma",
+      "nosotros/as": "tomamos",
+      "ustedes/ellos/ellas": "toman"
+    },
+    "preterite": {
+      "yo": "tomé",
+      "tú": "tomaste",
+      "usted/él/ella": "tomó",
+      "nosotros/as": "tomamos",
+      "ustedes/ellos/ellas": "tomaron"
+    },
+    "imperfect": {
+      "yo": "tomaba",
+      "tú": "tomabas",
+      "usted/él/ella": "tomaba",
+      "nosotros/as": "tomábamos",
+      "ustedes/ellos/ellas": "tomaban"
+    },
+    "future": {
+      "yo": "tomaré",
+      "tú": "tomarás",
+      "usted/él/ella": "tomará",
+      "nosotros/as": "tomaremos",
+      "ustedes/ellos/ellas": "tomarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "ver",
+    "meaning": "to see",
+    "type": "irregular",
+    "example": "Veo una película.",
+    "present": {
+      "yo": "veo",
+      "tú": "ves",
+      "usted/él/ella": "ve",
+      "nosotros/as": "vemos",
+      "ustedes/ellos/ellas": "ven"
+    },
+    "preterite": {
+      "yo": "vi",
+      "tú": "viste",
+      "usted/él/ella": "vio",
+      "nosotros/as": "vimos",
+      "ustedes/ellos/ellas": "vieron"
+    },
+    "imperfect": {
+      "yo": "veía",
+      "tú": "veías",
+      "usted/él/ella": "veía",
+      "nosotros/as": "veíamos",
+      "ustedes/ellos/ellas": "veían"
+    },
+    "future": {
+      "yo": "veré",
+      "tú": "verás",
+      "usted/él/ella": "verá",
+      "nosotros/as": "veremos",
+      "ustedes/ellos/ellas": "verán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "llamarse",
+    "meaning": "to be called",
+    "type": "reflexive",
+    "example": "Me llamo Ana.",
+    "present": {
+      "yo": "me llamo",
+      "tú": "te llamas",
+      "usted/él/ella": "se llama",
+      "nosotros/as": "nos llamamos",
+      "ustedes/ellos/ellas": "se llaman"
+    },
+    "preterite": {
+      "yo": "me llamé",
+      "tú": "te llamaste",
+      "usted/él/ella": "se llamó",
+      "nosotros/as": "nos llamamos",
+      "ustedes/ellos/ellas": "se llamaron"
+    },
+    "imperfect": {
+      "yo": "me llamaba",
+      "tú": "te llamabas",
+      "usted/él/ella": "se llamaba",
+      "nosotros/as": "nos llamábamos",
+      "ustedes/ellos/ellas": "se llamaban"
+    },
+    "future": {
+      "yo": "me llamaré",
+      "tú": "te llamarás",
+      "usted/él/ella": "se llamará",
+      "nosotros/as": "nos llamaremos",
+      "ustedes/ellos/ellas": "se llamarán"
+    },
+    "note": "Reflexive pronouns agree with the subject."
+  },
+  {
+    "verb": "levantarse",
+    "meaning": "to get up",
+    "type": "reflexive",
+    "example": "Me levanto temprano.",
+    "present": {
+      "yo": "me levanto",
+      "tú": "te levantas",
+      "usted/él/ella": "se levanta",
+      "nosotros/as": "nos levantamos",
+      "ustedes/ellos/ellas": "se levantan"
+    },
+    "preterite": {
+      "yo": "me levanté",
+      "tú": "te levantaste",
+      "usted/él/ella": "se levantó",
+      "nosotros/as": "nos levantamos",
+      "ustedes/ellos/ellas": "se levantaron"
+    },
+    "imperfect": {
+      "yo": "me levantaba",
+      "tú": "te levantabas",
+      "usted/él/ella": "se levantaba",
+      "nosotros/as": "nos levantábamos",
+      "ustedes/ellos/ellas": "se levantaban"
+    },
+    "future": {
+      "yo": "me levantaré",
+      "tú": "te levantarás",
+      "usted/él/ella": "se levantará",
+      "nosotros/as": "nos levantaremos",
+      "ustedes/ellos/ellas": "se levantarán"
+    },
+    "note": "Reflexive pronouns agree with the subject."
+  },
+  {
+    "verb": "acostarse",
+    "meaning": "to go to bed",
+    "type": "reflexive",
+    "example": "Me acuesto tarde.",
+    "present": {
+      "yo": "me acuesto",
+      "tú": "te acuestas",
+      "usted/él/ella": "se acuesta",
+      "nosotros/as": "nos acostamos",
+      "ustedes/ellos/ellas": "se acuestan"
+    },
+    "preterite": {
+      "yo": "me acosté",
+      "tú": "te acostaste",
+      "usted/él/ella": "se acostó",
+      "nosotros/as": "nos acostamos",
+      "ustedes/ellos/ellas": "se acostaron"
+    },
+    "imperfect": {
+      "yo": "me acostaba",
+      "tú": "te acostabas",
+      "usted/él/ella": "se acostaba",
+      "nosotros/as": "nos acostábamos",
+      "ustedes/ellos/ellas": "se acostaban"
+    },
+    "future": {
+      "yo": "me acostaré",
+      "tú": "te acostarás",
+      "usted/él/ella": "se acostará",
+      "nosotros/as": "nos acostaremos",
+      "ustedes/ellos/ellas": "se acostarán"
+    },
+    "note": "Reflexive pronouns agree with the subject."
+  },
+  {
+    "verb": "gustar",
+    "meaning": "to like (be pleasing)",
+    "type": "regular",
+    "example": "Me gustan los tacos.",
+    "present": {
+      "yo": "gusto",
+      "tú": "gustas",
+      "usted/él/ella": "gusta",
+      "nosotros/as": "gustamos",
+      "ustedes/ellos/ellas": "gustan"
+    },
+    "preterite": {
+      "yo": "gusté",
+      "tú": "gustaste",
+      "usted/él/ella": "gustó",
+      "nosotros/as": "gustamos",
+      "ustedes/ellos/ellas": "gustaron"
+    },
+    "imperfect": {
+      "yo": "gustaba",
+      "tú": "gustabas",
+      "usted/él/ella": "gustaba",
+      "nosotros/as": "gustábamos",
+      "ustedes/ellos/ellas": "gustaban"
+    },
+    "future": {
+      "yo": "gustaré",
+      "tú": "gustarás",
+      "usted/él/ella": "gustará",
+      "nosotros/as": "gustaremos",
+      "ustedes/ellos/ellas": "gustarán"
+    },
+    "note": "Usually used with indirect object pronouns: me gusta el café / me gustan los tacos. The thing liked determines the verb form."
+  },
+  {
+    "verb": "encantar",
+    "meaning": "to love (be delightful)",
+    "type": "regular",
+    "example": "Me encanta el café.",
+    "present": {
+      "yo": "encanto",
+      "tú": "encantas",
+      "usted/él/ella": "encanta",
+      "nosotros/as": "encantamos",
+      "ustedes/ellos/ellas": "encantan"
+    },
+    "preterite": {
+      "yo": "encanté",
+      "tú": "encantaste",
+      "usted/él/ella": "encantó",
+      "nosotros/as": "encantamos",
+      "ustedes/ellos/ellas": "encantaron"
+    },
+    "imperfect": {
+      "yo": "encantaba",
+      "tú": "encantabas",
+      "usted/él/ella": "encantaba",
+      "nosotros/as": "encantábamos",
+      "ustedes/ellos/ellas": "encantaban"
+    },
+    "future": {
+      "yo": "encantaré",
+      "tú": "encantarás",
+      "usted/él/ella": "encantará",
+      "nosotros/as": "encantaremos",
+      "ustedes/ellos/ellas": "encantarán"
+    },
+    "note": "Usually used with indirect object pronouns: me gusta el café / me gustan los tacos. The thing liked determines the verb form."
+  },
+  {
+    "verb": "estudiar",
+    "meaning": "to study",
+    "type": "regular",
+    "example": "Estudio español.",
+    "present": {
+      "yo": "estudio",
+      "tú": "estudias",
+      "usted/él/ella": "estudia",
+      "nosotros/as": "estudiamos",
+      "ustedes/ellos/ellas": "estudian"
+    },
+    "preterite": {
+      "yo": "estudié",
+      "tú": "estudiaste",
+      "usted/él/ella": "estudió",
+      "nosotros/as": "estudiamos",
+      "ustedes/ellos/ellas": "estudiaron"
+    },
+    "imperfect": {
+      "yo": "estudiaba",
+      "tú": "estudiabas",
+      "usted/él/ella": "estudiaba",
+      "nosotros/as": "estudiábamos",
+      "ustedes/ellos/ellas": "estudiaban"
+    },
+    "future": {
+      "yo": "estudiaré",
+      "tú": "estudiarás",
+      "usted/él/ella": "estudiará",
+      "nosotros/as": "estudiaremos",
+      "ustedes/ellos/ellas": "estudiarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "escribir",
+    "meaning": "to write",
+    "type": "regular",
+    "example": "Escribo una carta.",
+    "present": {
+      "yo": "escribo",
+      "tú": "escribes",
+      "usted/él/ella": "escribe",
+      "nosotros/as": "escribimos",
+      "ustedes/ellos/ellas": "escriben"
+    },
+    "preterite": {
+      "yo": "escribí",
+      "tú": "escribiste",
+      "usted/él/ella": "escribió",
+      "nosotros/as": "escribimos",
+      "ustedes/ellos/ellas": "escribieron"
+    },
+    "imperfect": {
+      "yo": "escribía",
+      "tú": "escribías",
+      "usted/él/ella": "escribía",
+      "nosotros/as": "escribíamos",
+      "ustedes/ellos/ellas": "escribían"
+    },
+    "future": {
+      "yo": "escribiré",
+      "tú": "escribirás",
+      "usted/él/ella": "escribirá",
+      "nosotros/as": "escribiremos",
+      "ustedes/ellos/ellas": "escribirán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "leer",
+    "meaning": "to read",
+    "type": "spelling change",
+    "example": "Leo un libro.",
+    "present": {
+      "yo": "leo",
+      "tú": "lees",
+      "usted/él/ella": "lee",
+      "nosotros/as": "leemos",
+      "ustedes/ellos/ellas": "leen"
+    },
+    "preterite": {
+      "yo": "leí",
+      "tú": "leíste",
+      "usted/él/ella": "leyó",
+      "nosotros/as": "leímos",
+      "ustedes/ellos/ellas": "leyeron"
+    },
+    "imperfect": {
+      "yo": "leía",
+      "tú": "leías",
+      "usted/él/ella": "leía",
+      "nosotros/as": "leíamos",
+      "ustedes/ellos/ellas": "leían"
+    },
+    "future": {
+      "yo": "leeré",
+      "tú": "leerás",
+      "usted/él/ella": "leerá",
+      "nosotros/as": "leeremos",
+      "ustedes/ellos/ellas": "leerán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "comprar",
+    "meaning": "to buy",
+    "type": "regular",
+    "example": "Compro pan.",
+    "present": {
+      "yo": "compro",
+      "tú": "compras",
+      "usted/él/ella": "compra",
+      "nosotros/as": "compramos",
+      "ustedes/ellos/ellas": "compran"
+    },
+    "preterite": {
+      "yo": "compré",
+      "tú": "compraste",
+      "usted/él/ella": "compró",
+      "nosotros/as": "compramos",
+      "ustedes/ellos/ellas": "compraron"
+    },
+    "imperfect": {
+      "yo": "compraba",
+      "tú": "comprabas",
+      "usted/él/ella": "compraba",
+      "nosotros/as": "comprábamos",
+      "ustedes/ellos/ellas": "compraban"
+    },
+    "future": {
+      "yo": "compraré",
+      "tú": "comprarás",
+      "usted/él/ella": "comprará",
+      "nosotros/as": "compraremos",
+      "ustedes/ellos/ellas": "comprarán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "escuchar",
+    "meaning": "to listen",
+    "type": "regular",
+    "example": "Escucho música.",
+    "present": {
+      "yo": "escucho",
+      "tú": "escuchas",
+      "usted/él/ella": "escucha",
+      "nosotros/as": "escuchamos",
+      "ustedes/ellos/ellas": "escuchan"
+    },
+    "preterite": {
+      "yo": "escuché",
+      "tú": "escuchaste",
+      "usted/él/ella": "escuchó",
+      "nosotros/as": "escuchamos",
+      "ustedes/ellos/ellas": "escucharon"
+    },
+    "imperfect": {
+      "yo": "escuchaba",
+      "tú": "escuchabas",
+      "usted/él/ella": "escuchaba",
+      "nosotros/as": "escuchábamos",
+      "ustedes/ellos/ellas": "escuchaban"
+    },
+    "future": {
+      "yo": "escucharé",
+      "tú": "escucharás",
+      "usted/él/ella": "escuchará",
+      "nosotros/as": "escucharemos",
+      "ustedes/ellos/ellas": "escucharán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "pedir",
+    "meaning": "to request; order",
+    "type": "stem-changing",
+    "example": "Pido un café.",
+    "present": {
+      "yo": "pido",
+      "tú": "pides",
+      "usted/él/ella": "pide",
+      "nosotros/as": "pedimos",
+      "ustedes/ellos/ellas": "piden"
+    },
+    "preterite": {
+      "yo": "pedí",
+      "tú": "pediste",
+      "usted/él/ella": "pidió",
+      "nosotros/as": "pedimos",
+      "ustedes/ellos/ellas": "pidieron"
+    },
+    "imperfect": {
+      "yo": "pedía",
+      "tú": "pedías",
+      "usted/él/ella": "pedía",
+      "nosotros/as": "pedíamos",
+      "ustedes/ellos/ellas": "pedían"
+    },
+    "future": {
+      "yo": "pediré",
+      "tú": "pedirás",
+      "usted/él/ella": "pedirá",
+      "nosotros/as": "pediremos",
+      "ustedes/ellos/ellas": "pedirán"
+    },
+    "note": ""
+  },
+  {
+    "verb": "repetir",
+    "meaning": "to repeat",
+    "type": "stem-changing",
+    "example": "Repito la palabra.",
+    "present": {
+      "yo": "repito",
+      "tú": "repites",
+      "usted/él/ella": "repite",
+      "nosotros/as": "repetimos",
+      "ustedes/ellos/ellas": "repiten"
+    },
+    "preterite": {
+      "yo": "repetí",
+      "tú": "repetiste",
+      "usted/él/ella": "repitió",
+      "nosotros/as": "repetimos",
+      "ustedes/ellos/ellas": "repitieron"
+    },
+    "imperfect": {
+      "yo": "repetía",
+      "tú": "repetías",
+      "usted/él/ella": "repetía",
+      "nosotros/as": "repetíamos",
+      "ustedes/ellos/ellas": "repetían"
+    },
+    "future": {
+      "yo": "repetiré",
+      "tú": "repetirás",
+      "usted/él/ella": "repetirá",
+      "nosotros/as": "repetiremos",
+      "ustedes/ellos/ellas": "repetirán"
+    },
+    "note": ""
+  }
+]

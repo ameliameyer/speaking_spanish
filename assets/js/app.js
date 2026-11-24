@@ -704,7 +704,609 @@ function openLesson(id){lessonId=id;section='Curriculum';render();window.scrollT
 function render(){renderAccount();installDictionary();nav.innerHTML=sections.map(s=>`<button class="${section===s?'active':''}" data-section="${esc(s)}">${esc(s)}</button>`).join('');nav.querySelectorAll('button').forEach(b=>b.onclick=()=>setSection(b.dataset.section));root.innerHTML=lessonId?renderLesson(lessonId):({Home:home,Curriculum:course,Vocabulary:words,'Verb Lab':verbLab,Conversation:conversation,'Practice Together':partnerPractice,Practice:practice}[section])();root.querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>openLesson(b.dataset.lesson));root.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>setSection(b.dataset.goto));if(lessonId)wireLesson();if(section==='Vocabulary'&&!lessonId)wireVocabulary();if(section==='Practice Together'&&!lessonId)wirePartner()}
 function home(){let done=saved().length,total=a0().length,next=a0().find(l=>!saved().includes(l.id));return `<div class="eyebrow">Mi centro de aprendizaje</div><h1>¡Vamos a aprender!</h1><p class="muted">Your Mexican Spanish learning center. Start from zero, learn the rules, and practice speaking naturally.</p><div class="grid"><div class="card"><div class="stat">A0</div>Current level</div><div class="card"><div class="stat">${done}/${total}</div>Foundation lessons complete</div><div class="card"><div class="stat">${vocab.length}</div>Starter vocabulary words</div></div><div class="card"><h2>Your progress</h2><div class="progress"><div style="width:${done/total*100}%"></div></div><p class="muted">${Math.round(done/total*100)}% of A0 complete</p>${next?`<h3>Up next: ${esc(next.title)}</h3><p>${esc(next.summary)}</p><button data-lesson="${next.id}">Open lesson →</button>`:'<p>¡Felicidades! You completed all A0 lessons.</p>'}</div><div class="grid">${sections.slice(1).map(s=>`<div class="card"><h3>${esc(s)}</h3><p class="muted">${({Curriculum:'Follow the learning path.',Vocabulary:'Explore useful Mexican Spanish words.','Verb Lab':'Study conjugation patterns.',Conversation:'Read realistic dialogues.','Practice Together':'Practice spoken Spanish with a partner.',Practice:'Review what you have learned.'})[s]}</p><button class="secondary" data-goto="${esc(s)}">Explore →</button></div>`).join('')}</div>`}
 function course(){return `<div class="eyebrow">Structured learning</div><h1>Curriculum</h1><p class="muted">A0 foundations first. Higher-level courses are planned and will be developed progressively.</p>${curriculum.levels.map(level=>`<div class="card"><h2>${esc(level.title)}</h2>${level.description?`<p class="muted">${esc(level.description)}</p>`:''}${level.lessons.length?level.lessons.map((l,i)=>`<div class="lesson-row"><div><strong>${String(i+1).padStart(2,'0')} · ${esc(l.title)}</strong><div class="muted">${esc(l.summary)}</div></div><div><span class="pill">${saved().includes(l.id)?'Completed':lessonContent[l.id]?'Available':'Coming soon'}</span> ${lessonContent[l.id]?`<button data-lesson="${l.id}">Study</button>`:''}</div></div>`).join(''):'<p class="muted">Coming in a future curriculum release.</p>'}</div>`).join('')}`}
-function renderLesson(id){const l=a0().find(x=>x.id===id),c=lessonContent[id];if(!l||!c)return '<p>Lesson not available yet.</p>';return `<button class="secondary" id="back">← Curriculum</button><h1>${esc(l.title)}</h1><div class="card"><h2>1. Learn</h2><p>${esc(c.intro)}</p><h2>2. Examples</h2>${c.examples.map(x=>`<div class="example"><strong>${esc(x[0])}</strong><div>${esc(x[1])}</div></div>`).join('')}<h2>3. Step-by-step breakdown</h2><p>${esc(c.breakdown)}</p><h2>4. Common mistakes</h2><p>${esc(c.mistake)}</p><h2>5. Vocabulary</h2><ul>${c.vocabulary.map((x,i)=>`<li>${esc(x)} <button class="secondary" data-lesson-word="${i}">Save word</button></li>`).join('')}</ul><h2>6. Practice together</h2><p>${esc(c.partner)}</p><h2>7. Knowledge check</h2>${c.quiz.map((q,i)=>`<div class="question"><strong>${i+1}. ${esc(q[0])}</strong><div>${q[1].map((o,j)=>`<label><input type="radio" name="quiz-${i}" value="${j}"> ${esc(o)}</label>`).join('')}</div><p id="feedback-${i}" role="status"></p></div>`).join('')}<button id="check">Check answers</button><p id="feedback" role="status"></p><button id="complete" disabled>Mark lesson complete</button></div>`}
+const studyGuides={
+  "a0-01": {
+    "objectives": [
+      "Recognize the five vowels and common spelling patterns",
+      "Distinguish r, rr and ñ"
+    ],
+    "reference": [
+      [
+        "a, e, i, o, u",
+        "Keep each vowel steady: casa, mesa, vino, poco, luna."
+      ],
+      [
+        "c / z / s",
+        "In Mexico, cena, zapato and sopa use the same s sound for these letters in the relevant positions."
+      ],
+      [
+        "qu / gu / gü",
+        "queso has silent u; guerra has silent u; pingüino pronounces u."
+      ],
+      [
+        "r / rr",
+        "A single r between vowels is tapped; rr is trilled. Initial r is also strong."
+      ],
+      [
+        "ll / y",
+        "In most Mexican speech, llave and ya begin with the same consonant sound."
+      ]
+    ],
+    "worked": [
+      [
+        "Read queso.",
+        "Identify qu before e → k; pronounce e and o as steady vowels."
+      ],
+      [
+        "Read guitarra.",
+        "Identify gu before i → hard g; rr → trill."
+      ]
+    ],
+    "written": [
+      [
+        "Which letter is silent in queso?",
+        "u",
+        "Qu before e or i has silent u."
+      ],
+      [
+        "Write the Spanish word for dog (not but).",
+        "perro",
+        "The double r distinguishes perro from pero."
+      ]
+    ]
+  },
+  "a0-02": {
+    "objectives": [
+      "Find the stressed syllable",
+      "Apply the default stress rules"
+    ],
+    "reference": [
+      [
+        "Vowel, n, s",
+        "Normally stress the next-to-last syllable: casa, joven, lunes."
+      ],
+      [
+        "Other consonants",
+        "Normally stress the last syllable: papel, reloj."
+      ],
+      [
+        "Written accent",
+        "Overrides default stress: café, México, teléfono."
+      ],
+      [
+        "Syllables",
+        "A syllable has a vowel nucleus. Adjacent vowels may combine or separate: tierra (tie-rra), día (dí-a)."
+      ]
+    ],
+    "worked": [
+      [
+        "Analyze teléfono.",
+        "te-lé-fo-no; the accent explicitly marks lé."
+      ],
+      [
+        "Analyze reloj.",
+        "re-loj; final j triggers default final stress."
+      ]
+    ],
+    "written": [
+      [
+        "Add the accent to cafe (coffee).",
+        "café",
+        "Final stress requires an accent."
+      ],
+      [
+        "Write the stressed syllable in teléfono.",
+        "lé",
+        "The accent identifies lé."
+      ]
+    ]
+  },
+  "a0-03": {
+    "objectives": [
+      "Choose greetings by time and formality",
+      "Introduce yourself and respond politely"
+    ],
+    "reference": [
+      [
+        "Morning / afternoon / night",
+        "Buenos días / buenas tardes / buenas noches."
+      ],
+      [
+        "Familiar / respectful",
+        "¿Cómo estás? / ¿Cómo está?"
+      ],
+      [
+        "Name",
+        "¿Cómo te llamas? / ¿Cómo se llama?; Me llamo + name."
+      ],
+      [
+        "Responses",
+        "Bien, gracias. ¿Y tú? / ¿Y usted?; Igualmente."
+      ]
+    ],
+    "worked": [
+      [
+        "Meet a new colleague.",
+        "Buenos días. ¿Cómo se llama? — Me llamo Ana. Mucho gusto."
+      ],
+      [
+        "Meet a friend.",
+        "Hola, ¿cómo estás? — Bien, gracias. ¿Y tú?"
+      ]
+    ],
+    "written": [
+      [
+        "Translate: Good morning.",
+        "buenos días",
+        "Días is masculine."
+      ],
+      [
+        "Translate: Nice to meet you.",
+        "mucho gusto",
+        "A common Mexican greeting."
+      ]
+    ]
+  },
+  "a0-04": {
+    "objectives": [
+      "Identify person and number",
+      "Select familiar or respectful address"
+    ],
+    "reference": [
+      [
+        "yo / tú / usted",
+        "I / familiar you / respectful you"
+      ],
+      [
+        "él / ella",
+        "he / she"
+      ],
+      [
+        "nosotros / nosotras",
+        "we (mixed or masculine / all feminine)"
+      ],
+      [
+        "ellos / ellas / ustedes",
+        "they / they (all feminine) / you all"
+      ],
+      [
+        "Omission",
+        "Soy Ana is natural without yo; use pronouns for emphasis or clarity."
+      ]
+    ],
+    "worked": [
+      [
+        "Address two friends.",
+        "Choose ustedes, not ellos, because you are speaking to them."
+      ],
+      [
+        "Refer to two women.",
+        "Choose ellas when talking about them; nosotras if you are one of them."
+      ]
+    ],
+    "written": [
+      [
+        "Translate: you all.",
+        "ustedes",
+        "Mexico uses ustedes for plural address."
+      ],
+      [
+        "Translate: we (all women).",
+        "nosotras",
+        "Use feminine plural for an all-female group."
+      ]
+    ]
+  },
+  "a0-05": {
+    "objectives": [
+      "Identify noun gender",
+      "Form regular plurals"
+    ],
+    "reference": [
+      [
+        "-o / -a",
+        "Often masculine/feminine: el libro, la mesa."
+      ],
+      [
+        "Exceptions",
+        "el día, la mano; learn the article with each noun."
+      ],
+      [
+        "Vowel endings",
+        "Add -s: casa → casas."
+      ],
+      [
+        "Consonant endings",
+        "Usually add -es: ciudad → ciudades."
+      ],
+      [
+        "Final z",
+        "Change z to c before -es: luz → luces."
+      ]
+    ],
+    "worked": [
+      [
+        "Pluralize la ciudad.",
+        "ciudad + es → ciudades; la → las."
+      ],
+      [
+        "Pluralize el día.",
+        "día + s → días; el → los."
+      ]
+    ],
+    "written": [
+      [
+        "Write the plural of la mesa, including article.",
+        "las mesas",
+        "Feminine plural."
+      ],
+      [
+        "Write the plural of la luz, including article.",
+        "las luces",
+        "Z becomes c."
+      ]
+    ]
+  },
+  "a0-06": {
+    "objectives": [
+      "Distinguish definite and indefinite articles",
+      "Match gender and number"
+    ],
+    "reference": [
+      [
+        "Masculine singular",
+        "el = the; un = a"
+      ],
+      [
+        "Feminine singular",
+        "la = the; una = a"
+      ],
+      [
+        "Masculine plural",
+        "los = the; unos = some"
+      ],
+      [
+        "Feminine plural",
+        "las = the; unas = some"
+      ],
+      [
+        "Context",
+        "Tengo un libro introduces a book; El libro es rojo refers to the known book."
+      ]
+    ],
+    "worked": [
+      [
+        "Translate some tables.",
+        "Mesa is feminine; mesas is plural; choose unas mesas."
+      ],
+      [
+        "Translate the days.",
+        "Día is masculine; choose los días."
+      ]
+    ],
+    "written": [
+      [
+        "Translate: a table.",
+        "una mesa",
+        "Feminine singular indefinite."
+      ],
+      [
+        "Translate: the books.",
+        "los libros",
+        "Masculine plural definite."
+      ]
+    ]
+  },
+  "a0-07": {
+    "objectives": [
+      "Conjugate ser in the present",
+      "Express identity, origin and characteristics"
+    ],
+    "reference": [
+      [
+        "yo / tú",
+        "soy / eres"
+      ],
+      [
+        "él, ella, usted",
+        "es"
+      ],
+      [
+        "nosotros/as",
+        "somos"
+      ],
+      [
+        "ellos, ellas, ustedes",
+        "son"
+      ],
+      [
+        "Uses",
+        "Identity: Soy Ana. Origin: Soy de México. Profession: Soy estudiante. Time: Son las dos."
+      ]
+    ],
+    "worked": [
+      [
+        "Translate we are students.",
+        "We → nosotros; ser → somos; students → estudiantes: Somos estudiantes."
+      ],
+      [
+        "Ask origin.",
+        "¿De dónde eres? uses eres for tú."
+      ]
+    ],
+    "written": [
+      [
+        "Translate: We are friends (masculine or mixed).",
+        "somos amigos",
+        "Somos agrees with we."
+      ],
+      [
+        "Translate: I am from Mexico.",
+        "soy de México",
+        "Origin uses ser + de."
+      ]
+    ]
+  },
+  "a0-08": {
+    "objectives": [
+      "Conjugate estar",
+      "Distinguish location and condition from identity"
+    ],
+    "reference": [
+      [
+        "yo / tú",
+        "estoy / estás"
+      ],
+      [
+        "él, ella, usted",
+        "está"
+      ],
+      [
+        "nosotros/as",
+        "estamos"
+      ],
+      [
+        "ellos, ellas, ustedes",
+        "están"
+      ],
+      [
+        "Location and condition",
+        "Estoy en casa; Estoy bien. Event location uses ser: La fiesta es en casa."
+      ],
+      [
+        "Contrast",
+        "Es listo = clever; está listo = ready. Meaning matters more than duration."
+      ]
+    ],
+    "worked": [
+      [
+        "Translate the book is here.",
+        "El libro is singular; object location → está; here → aquí."
+      ],
+      [
+        "Translate we are at home.",
+        "We → estamos; at home → en casa."
+      ]
+    ],
+    "written": [
+      [
+        "Translate: We are at home.",
+        "estamos en casa",
+        "Location uses estar."
+      ],
+      [
+        "Translate: The book is here.",
+        "el libro está aquí",
+        "Object location uses está."
+      ]
+    ]
+  },
+  "a0-09": {
+    "objectives": [
+      "Construct subject–verb–complement sentences",
+      "Match adjectives to nouns"
+    ],
+    "reference": [
+      [
+        "Basic order",
+        "Ana habla español: subject + verb + object."
+      ],
+      [
+        "Subject omission",
+        "Tengo un libro: tengo identifies I."
+      ],
+      [
+        "Adjective agreement",
+        "rojo, roja, rojos, rojas; adjectives ending in -e often do not change gender: grande, grandes."
+      ],
+      [
+        "Position",
+        "Descriptive adjectives often follow nouns: un libro rojo."
+      ],
+      [
+        "Useful forms",
+        "hablo/hablas/habla; tengo/tienes/tiene."
+      ]
+    ],
+    "worked": [
+      [
+        "Build the red books.",
+        "libros is masculine plural → los libros rojos."
+      ],
+      [
+        "Build I have a red book.",
+        "Tengo + un libro + rojo → Tengo un libro rojo."
+      ]
+    ],
+    "written": [
+      [
+        "Translate: the white houses.",
+        "las casas blancas",
+        "Feminine plural agreement."
+      ],
+      [
+        "Translate: I have a red book.",
+        "tengo un libro rojo",
+        "Tengo identifies I."
+      ]
+    ]
+  },
+  "a0-10": {
+    "objectives": [
+      "Ask yes/no and information questions",
+      "Negate a sentence"
+    ],
+    "reference": [
+      [
+        "Yes/no",
+        "¿Hablas español? uses intonation and question marks."
+      ],
+      [
+        "Information",
+        "qué = what; dónde = where; cuándo = when; quién = who; cómo = how; por qué = why."
+      ],
+      [
+        "Useful forms",
+        "vivo = I live; vives = you live; vive = he/she/usted lives."
+      ],
+      [
+        "Negation",
+        "No + conjugated verb: No vivo aquí."
+      ],
+      [
+        "Answer",
+        "¿Por qué? — Porque… (because)."
+      ]
+    ],
+    "worked": [
+      [
+        "Ask where someone lives.",
+        "Dónde + vives → ¿Dónde vives?"
+      ],
+      [
+        "Negate I speak Spanish.",
+        "Hablo español → No hablo español."
+      ]
+    ],
+    "written": [
+      [
+        "Translate: Where do you live? (tú)",
+        "¿Dónde vives?",
+        "Dónde asks location."
+      ],
+      [
+        "Translate: I do not speak Spanish.",
+        "no hablo español",
+        "No precedes hablo."
+      ]
+    ]
+  },
+  "a0-11": {
+    "objectives": [
+      "Read numbers to 100",
+      "Express dates and clock time"
+    ],
+    "reference": [
+      [
+        "0–15",
+        "cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, once, doce, trece, catorce, quince"
+      ],
+      [
+        "16–29",
+        "dieciséis, diecisiete, dieciocho, diecinueve, veinte, veintiuno, veintidós, veintitrés, veinticuatro, veinticinco, veintiséis, veintisiete, veintiocho, veintinueve"
+      ],
+      [
+        "Tens",
+        "treinta, cuarenta, cincuenta, sesenta, setenta, ochenta, noventa, cien. Combine with y: cuarenta y dos."
+      ],
+      [
+        "Months",
+        "enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
+      ],
+      [
+        "Weekdays",
+        "lunes, martes, miércoles, jueves, viernes, sábado, domingo"
+      ],
+      [
+        "Dates / time",
+        "el cinco de mayo; es la una; son las dos; y cuarto = :15; y media = :30."
+      ]
+    ],
+    "worked": [
+      [
+        "Write 42.",
+        "cuarenta + y + dos."
+      ],
+      [
+        "Say 2:15.",
+        "Son las dos y cuarto."
+      ]
+    ],
+    "written": [
+      [
+        "Write 42 in Spanish.",
+        "cuarenta y dos",
+        "Tens + y + units."
+      ],
+      [
+        "Translate: It is 2:15.",
+        "son las dos y cuarto",
+        "Plural hour uses son las."
+      ]
+    ]
+  },
+  "a0-12": {
+    "objectives": [
+      "Combine the previous eleven lessons",
+      "Request clarification politely"
+    ],
+    "reference": [
+      [
+        "Opening",
+        "Hola, buenos días. ¿Cómo te llamas?"
+      ],
+      [
+        "Identity / origin",
+        "Me llamo Ana. Soy de México. ¿Y tú?"
+      ],
+      [
+        "Location / state",
+        "Estoy en casa. Estoy bien."
+      ],
+      [
+        "Clarification",
+        "No entiendo. ¿Puedes repetir? Más despacio, por favor."
+      ],
+      [
+        "Closing",
+        "Gracias. Hasta luego."
+      ]
+    ],
+    "worked": [
+      [
+        "A: Hola, ¿cómo te llamas? B: Me llamo Ana. A: Mucho gusto.",
+        "A opens, B introduces herself, A acknowledges."
+      ],
+      [
+        "A: ¿De dónde eres? B: Soy de México. ¿Y tú?",
+        "B answers using ser and returns the question."
+      ]
+    ],
+    "written": [
+      [
+        "Translate: I do not understand.",
+        "no entiendo",
+        "Use no before entiendo."
+      ],
+      [
+        "Translate: More slowly, please.",
+        "más despacio, por favor",
+        "A polite clarification request."
+      ]
+    ]
+  }
+};
+function renderLesson(id){const l=a0().find(x=>x.id===id),c=lessonContent[id],g=studyGuides[id];if(!l||!c)return '<p>Lesson not available yet.</p>';return `<button class="secondary" id="back">← Curriculum</button><h1>${esc(l.title)}</h1><div class="card"><h2>Learning objectives</h2><ul>${g.objectives.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h2>1. Learn</h2><p>${esc(c.intro)}</p><h3>Reference guide</h3>${g.reference.map(x=>`<div class="lesson-row"><strong>${esc(x[0])}</strong><span>${esc(x[1])}</span></div>`).join('')}<h2>2. Examples</h2>${c.examples.map(x=>`<div class="example"><strong>${esc(x[0])}</strong><div>${esc(x[1])}</div></div>`).join('')}<h2>3. Step-by-step breakdown</h2><p>${esc(c.breakdown)}</p>${g.worked.map(x=>`<div class="example"><strong>${esc(x[0])}</strong><p>${esc(x[1])}</p></div>`).join('')}<h2>4. Common mistakes</h2><p>${esc(c.mistake)}</p><h2>5. Vocabulary</h2><ul>${c.vocabulary.map((x,i)=>`<li>${esc(x)} <button class="secondary" data-lesson-word="${i}">Save word</button></li>`).join('')}</ul><h2>6. Practice together</h2><p>${esc(c.partner)}</p><h2>7. Written practice</h2><p>Write your answer before revealing the model answer. Compare spelling and accents.</p>${g.written.map((q,i)=>`<div class="question"><label for="written-${i}">${esc(q[0])}</label><input type="text" id="written-${i}" autocomplete="off"><details><summary>Reveal model answer</summary><strong>${esc(q[1])}</strong><p>${esc(q[2])}</p></details></div>`).join('')}<h2>8. Knowledge check</h2>${c.quiz.map((q,i)=>`<div class="question"><strong>${i+1}. ${esc(q[0])}</strong><div>${q[1].map((o,j)=>`<label><input type="radio" name="quiz-${i}" value="${j}"> ${esc(o)}</label>`).join('')}</div><p id="feedback-${i}" role="status"></p></div>`).join('')}<button id="check">Check answers</button><p id="feedback" role="status"></p><button id="complete" disabled>Mark lesson complete</button></div>`}
 function wireLesson(){document.querySelector('#back').onclick=()=>setSection('Curriculum');const c=lessonContent[lessonId];root.querySelectorAll('[data-lesson-word]').forEach(btn=>btn.onclick=()=>{const [es,en]=c.vocabulary[Number(btn.dataset.lessonWord)].split(' — ');openDictionary(es,en)});const b=document.querySelector('#complete'),f=document.querySelector('#feedback');document.querySelector('#check').onclick=()=>{let score=0;c.quiz.forEach((q,i)=>{const selected=document.querySelector('input[name="quiz-'+i+'"]:checked'),good=selected&&Number(selected.value)===q[2];if(good)score++;document.querySelector('#feedback-'+i).textContent=good?'¡Correcto! '+q[3]:selected?'Try again. '+q[3]:'Choose an answer.'});f.textContent=score+'/'+c.quiz.length+' correct';b.disabled=score!==c.quiz.length};root.querySelectorAll('input[type="radio"]').forEach(x=>x.onchange=()=>{b.disabled=true});b.onclick=async()=>{b.disabled=true;try{await completeLesson(lessonId);setSection('Curriculum')}catch(e){f.textContent=humanError(e);b.disabled=false}}}
 
 let vocabTab="Course",flashIndex=0;

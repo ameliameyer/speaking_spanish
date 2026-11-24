@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, setPersistence, browserLocalPersistence, sendPasswordResetEmail, linkWithCredential, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc, collection, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 const config = {
   apiKey: "AIzaSyBZVJS6ojaszBwfKNCpvC-9sxjUAk8T3Pg",
@@ -74,3 +74,8 @@ onAuthStateChanged(auth, async u => {
   readyResolve();
   profileListener();
 });
+
+function personalRef(uid){return collection(db,"users",uid,"vocabulary")}
+export async function listPersonalWords(){const u=user;if(!u)throw Error("Sign in first.");const snap=await getDocs(personalRef(u.uid));if(user?.uid!==u.uid)throw Error("Account changed.");return snap.docs.map(d=>({...d.data(),id:d.id}));}
+export async function savePersonalWord(entry){const u=user;if(!u)throw Error("Sign in first.");const es=entry.es.trim(),en=entry.en.trim();if(!es||!en)throw Error("Enter both Spanish and English.");const id=entry.id||crypto.randomUUID();await setDoc(doc(personalRef(u.uid),id),{es,en,note:entry.note||"",mastery:entry.mastery||"New"},{merge:true});}
+export async function removePersonalWord(id){if(!user)throw Error("Sign in first.");await deleteDoc(doc(personalRef(user.uid),id));}

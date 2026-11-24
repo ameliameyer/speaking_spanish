@@ -19,3 +19,15 @@
 #scenario{display:block;width:100%;max-width:490px;padding:11px;margin-top:10px;border-radius:7px;border:1px solid var(--line);font:inherit;background:white;color:var(--ink)}
 .your-line{border-left-color:#3e76a7;background:#e8f0f8}
 .your-line .pill{margin-left:8px}
+
+/* Dictionary controls use the existing learning lab design system. */
+.dictionary-toolbar{max-width:1080px;margin:16px auto 0;padding:0 24px;display:flex;justify-content:flex-end}
+#dictionary-launch{display:inline-flex;align-items:center;gap:8px}
+#dictionary-dialog{font:inherit;background:var(--white);box-shadow:0 12px 48px #1a222c26}
+#dictionary-dialog::backdrop{background:#1a222c66}
+#dictionary-dialog button{font:700 12px Montserrat,Arial,sans-serif;padding:10px 15px;border-radius:7px;border:1px solid var(--accent);background:var(--accent);color:white;cursor:pointer}
+#dictionary-dialog button:hover{background:var(--blue)}
+#dictionary-dialog button:disabled{opacity:.45;cursor:not-allowed}
+#dictionary-dialog input,#dictionary-dialog textarea{font:inherit;border:1px solid var(--line);border-radius:7px;padding:10px;max-width:100%;color:var(--ink);background:white}
+#dictionary-dialog label{font-size:12px;font-weight:700}
+@media(max-width:550px){.dictionary-toolbar{padding:0 16px}}
